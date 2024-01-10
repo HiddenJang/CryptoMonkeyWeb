@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <body>
+    <div class="container">
+      <form method="POST" action="" class="header clearfix">
+        <h3 class="text-muted">Авторизация</h3>
+        <form method="POST" action="" style="">
+            <div class="form-group">
+              <div><label>Логин</label></div>
+              <input type="text" class="form-control" style="width: 200.111px;" name="login" required>
+              <div><label>Пароль</label></div>
+              <input class="form-control" style="width: 200.111px;" name="password" required>
+            </div>
+            <h3 class="text-muted"></h3>
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary" style="">Войти</button>
+        </form>
+        <div>
+            <a href="/registration" style="display: block">Зарегистрироваться</a>
+        </div>
+        <!--<button type="submit" class="btn btn-primary" style="">Зарегестрироваться</button>-->
+        <h3>{{ text }}</h3>
+      <div class="row marketing"></div>
+    </div> <!-- /container -->
+</body>
+</html>
