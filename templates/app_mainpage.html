@@ -1,13 +1,100 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>MainWindow</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    {% load static %}
+    <link href="{% static 'app_mainpage/resources/css/axure_rp_page.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'app_mainpage/data/styles.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'app_mainpage/files/mainwindow/styles.css' %}" type="text/css" rel="stylesheet"/>
+  </head>
   <body>
-    <div class="container">
-      <form method="POST" action="http://127.0.0.1:8000/app_mainpage" class="header clearfix">
-        <h3 class="text-muted">Здесь будет основное окно приложения!</h3>
-        <div>
-            {% csrf_token %}
-            <button type="submit" class="btn btn-primary" style="">Выйти</button>
+    <div id="base" class="">
+
+      <!-- Unnamed (Header) -->
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u1" class="ax_default box_1">
+        <img id="u1_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u1.svg' %}"/>
+        <div id="u1_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
         </div>
-      <div class="row marketing"></div>
-    </div> <!-- /container -->
-</body>
+      </div>
+
+      <!-- Unnamed (Placeholder) -->
+      <div id="u2" class="ax_default placeholder">
+        <img id="u2_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u2.svg' %}"/>
+        <div id="u2_text" class="text ">
+          <p><span>Лого</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u3" class="ax_default label">
+        <div id="u3_div" class=""></div>
+        <div id="u3_text" class="text ">
+          <p><span>CryptoMonkey control panel</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4" class="ax_default primary_button">
+        <div id="u4_div" class=""></div>
+        <div id="u4_text" class="text">
+          <a href="/logout_page" style=""><span>Выйти</span></a>
+        </div>
+      </div>
+      <div id="u0" style="display:none; visibility:hidden;"></div>
+
+      <!-- Unnamed (Footer) -->
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u6" class="ax_default box_1">
+        <div id="u6_div" class=""></div>
+        <div id="u6_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+      <div id="u5" style="display:none; visibility:hidden;"></div>
+
+      <!-- Unnamed (SideBarR) -->
+
+      <!-- Unnamed (Placeholder) -->
+      <div id="u8" class="ax_default placeholder">
+        <img id="u8_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u8.svg' %}"/>
+        <div id="u8_text" class="text ">
+          <p><span>SideBarR</span></p>
+        </div>
+      </div>
+      <div id="u7" style="display:none; visibility:hidden;"></div>
+
+      <!-- Unnamed (Dynamic Panel) -->
+      <div id="u9" class="ax_default">
+        <div id="u9_state0" class="panel_state" data-label="State1" style="">
+          <div id="u9_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (SideBarL) -->
+
+            <!-- Unnamed (Placeholder) -->
+            <div id="u11" class="ax_default placeholder">
+              <img id="u11_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u11.svg' %}"/>
+              <div id="u11_text" class="text ">
+                <p><span>SideBarL</span></p>
+              </div>
+            </div>
+            <div id="u10" style="display:none;visibility:hidden;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u12" class="ax_default label">
+        <div id="u12_div" class=""></div>
+        <div id="u12_text" class="text">
+          <p><span>Выбор площадок</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
