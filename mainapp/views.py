@@ -7,11 +7,12 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def login_page(request):
+    print('flag loginPage')
     if request.method == 'POST':
         try:
             if request.user.is_authenticated:
                 context = {'text': f'Пользователь {request.user.username} уже авторизован!'}
-                return render(request, 'login_page.html', context)
+                return render(request, 'app_mainpage.html', context)
 
             else:
                 user_login = request.POST['login']
@@ -22,8 +23,7 @@ def login_page(request):
                     return render(request, 'login_page.html', context)
 
                 login(request, user)
-                context = {'text': 'Вы успешно авторизованы! Нажмите кнопку <Войти>!'}
-                return render(request, 'login_page.html', context)
+                return render(request, 'app_mainpage.html')
         except Exception:
             context = {'text': 'Ошибка авторизации!'}
             return render(request, 'login_page.html', context)
@@ -34,8 +34,7 @@ def login_page(request):
 
 def logout_page(request):
     logout(request)
-    context = {'text': 'Вы успешно вышли из системы!'}
-    return render(request, 'login_page.html', context)
+    return redirect(login_page)
 
 def registration_page(request):
     if request.method == 'POST':
