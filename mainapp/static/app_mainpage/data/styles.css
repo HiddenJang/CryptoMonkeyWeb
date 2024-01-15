@@ -14,14 +14,21 @@
 }
 .box_2 {
 }
+.ellipse {
+}
 .shape {
 }
 .image {
 }
 .placeholder {
 }
+.button {
+}
 .primary_button {
   color:#FFFFFF;
+}
+.link_button {
+  color:#169BD5;
 }
 .heading_1 {
   font-family:'Arial Обычный', 'Arial', sans-serif;
@@ -71,7 +78,21 @@
 .paragraph {
   text-align:left;
 }
+.line {
+}
 .text_field {
+  color:#000000;
+  text-align:left;
+}
+.text_area {
+  color:#000000;
+  text-align:left;
+}
+.droplist {
+  color:#000000;
+  text-align:left;
+}
+.list_box {
   color:#000000;
   text-align:left;
 }
@@ -83,9 +104,13 @@
 .tree_node {
   text-align:left;
 }
+.table_cell {
+}
 .form_hint {
   color:#999999;
 }
 .form_disabled {
+}
+.icon {
 }
 textarea, select, input, button { outline: none; }

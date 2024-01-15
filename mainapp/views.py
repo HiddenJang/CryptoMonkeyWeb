@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def login_page(request):
-    print('flag loginPage')
     if request.method == 'POST':
         try:
             if request.user.is_authenticated:
@@ -64,11 +63,9 @@ def app_mainpage(request):
                 context = {'text': 'Необходимо авторизоваться перед входом!'}
                 return render(request, 'login_page.html', context)
         elif request.method == 'POST':
-            print('flag1')
             return redirect(logout_page)
         else:
             raise Exception
     except Exception:
-        print('flag2')
         context = {'text': 'Ошибка входа! Попробуйте авторизоваться повторно!'}
         return render(request, 'login_page.html', context)
