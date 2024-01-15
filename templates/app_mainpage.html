@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
+{% load static %}
 <html>
   <head>
     <title>MainWindow</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    {% load static %}
     <link href="{% static 'app_mainpage/resources/css/axure_rp_page.css' %}" type="text/css" rel="stylesheet"/>
     <link href="{% static 'app_mainpage/data/styles.css' %}" type="text/css" rel="stylesheet"/>
     <link href="{% static 'app_mainpage/files/mainwindow/styles.css' %}" type="text/css" rel="stylesheet"/>
@@ -149,89 +149,94 @@
         </div>
       </div>
 
-      <!-- Unnamed (Checkbox) -->
-      <div id="u15" class="ax_default checkbox">
-        <label id="u15_input_label" for="u15_input" style="position: absolute; left: 0px;">
-          <img id="u15_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u15.svg' %}"/>
-          <div id="u15_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Myfin</span></p>
+      <form method="POST" action="{% url 'app_mainpage' %}" style="">
+          <!-- Unnamed (Checkbox) -->
+          <div id="u15" class="ax_default checkbox">
+            <label id="u15_input_label" for="u15_input" style="position: absolute; left: 0px;">
+              <img id="u15_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u15.svg' %}"/>
+              <div id="u15_text" class="text ">
+                <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Myfin</span></p>
+              </div>
+            </label>
+            <input id="u15_input" type="checkbox" value="checkbox"/>
           </div>
-        </label>
-        <input id="u15_input" type="checkbox" value="checkbox"/>
-      </div>
 
-      <!-- Unnamed (Image) -->
-      <div id="u16" class="ax_default image">
-        <img id="u16_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u16.png' %}"/>
-        <div id="u16_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Checkbox) -->
-      <div id="u17" class="ax_default checkbox">
-        <label id="u17_input_label" for="u17_input" style="position: absolute; left: 0px;">
-          <img id="u17_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u17.svg' %}"/>
-          <div id="u17_text" class="text ">
-            <p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-size:14px;">Kucoin</span></p>
+          <!-- Unnamed (Image) -->
+          <div id="u16" class="ax_default image">
+            <img id="u16_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u16.png' %}"/>
+            <div id="u16_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
           </div>
-        </label>
-        <input id="u17_input" type="checkbox" value="checkbox"/>
-      </div>
 
-      <!-- Unnamed (Image) -->
-      <div id="u18" class="ax_default image">
-        <img id="u18_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u18.png' %}"/>
-        <div id="u18_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Checkbox) -->
-      <div id="u19" class="ax_default checkbox">
-        <label id="u19_input_label" for="u19_input" style="position: absolute; left: 0px;">
-          <img id="u19_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u19.svg' %}"/>
-          <div id="u19_text" class="text ">
-            <p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-size:14px;">Coinbase</span></p>
+          <!-- Unnamed (Checkbox) -->
+          <div id="u17" class="ax_default checkbox">
+            <label id="u17_input_label" for="u17_input" style="position: absolute; left: 0px;">
+              <img id="u17_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u17.svg' %}"/>
+              <div id="u17_text" class="text ">
+                <p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-size:14px;">Kucoin</span></p>
+              </div>
+            </label>
+            <input id="u17_input" type="checkbox" value="checkbox"/>
           </div>
-        </label>
-        <input id="u19_input" type="checkbox" value="checkbox"/>
-      </div>
 
-      <!-- Unnamed (Image) -->
-      <div id="u20" class="ax_default image">
-        <img id="u20_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u20.png' %}"/>
-        <div id="u20_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Checkbox) -->
-      <div id="u21" class="ax_default checkbox selected">
-        <label id="u21_input_label" for="u21_input" style="position: absolute; left: 0px;">
-          <img id="u21_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u21_selected.svg' %}"/>
-          <div id="u21_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Huobi</span></p>
+          <!-- Unnamed (Image) -->
+          <div id="u18" class="ax_default image">
+            <img id="u18_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u18.png' %}"/>
+            <div id="u18_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
           </div>
-        </label>
-        <input id="u21_input" type="checkbox" value="checkbox"/>
-      </div>
 
-      <!-- Unnamed (Image) -->
-      <div id="u22" class="ax_default image">
-        <img id="u22_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u22.png' %}"/>
-        <div id="u22_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
+          <!-- Unnamed (Checkbox) -->
+          <div id="u19" class="ax_default checkbox">
+            <label id="u19_input_label" for="u19_input" style="position: absolute; left: 0px;">
+              <img id="u19_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u19.svg' %}"/>
+              <div id="u19_text" class="text ">
+                <p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-size:14px;">Coinbase</span></p>
+              </div>
+            </label>
+            <input id="u19_input" type="checkbox" value="checkbox"/>
+          </div>
 
-      <!-- Unnamed (Rectangle) -->
-      <div id="u23" class="ax_default button">
-        <div id="u23_div" class=""></div>
-        <div id="u23_text" class="text ">
-          <p><span>Загрузить данные</span></p>
-        </div>
-      </div>
+          <!-- Unnamed (Image) -->
+          <div id="u20" class="ax_default image">
+            <img id="u20_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u20.png' %}"/>
+            <div id="u20_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Checkbox) -->
+          <div id="u21" class="ax_default checkbox selected">
+            <label id="u21_input_label" for="u21_input" style="position: absolute; left: 0px;">
+              <img id="u21_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u21_selectedDisabled.svg' %}"/>
+              <div id="u21_text" class="text ">
+                <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Huobi</span></p>
+              </div>
+            </label>
+            <input id="u21_input" type="checkbox" value="checkbox"/>
+          </div>
+
+          <!-- Unnamed (Image) -->
+          <div id="u22" class="ax_default image">
+            <img id="u22_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u22.png' %}"/>
+            <div id="u22_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          {% csrf_token %}
+          <button type="submit" class="btn btn-primary" style="">
+              <div id="u23" class="ax_default button">
+                <div id="u23_div" class=""></div>
+                <div id="u23_text" class="text ">
+                  <p><span>Загрузить данные</span></p>
+                </div>
+              </div>
+          </button>
+      </form>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u24" class="ax_default label">

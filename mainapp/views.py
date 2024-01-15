@@ -10,8 +10,7 @@ def login_page(request):
     if request.method == 'POST':
         try:
             if request.user.is_authenticated:
-                context = {'text': f'Пользователь {request.user.username} уже авторизован!'}
-                return render(request, 'app_mainpage.html', context)
+                return redirect(app_mainpage)
 
             else:
                 user_login = request.POST['login']
@@ -27,7 +26,7 @@ def login_page(request):
             context = {'text': 'Ошибка авторизации!'}
             return render(request, 'login_page.html', context)
     elif request.method == 'GET' and request.user.is_authenticated:
-        return render(request, 'app_mainpage.html')
+        return redirect(app_mainpage)
     else:
         return render(request, 'login_page.html')
 
@@ -63,7 +62,9 @@ def app_mainpage(request):
                 context = {'text': 'Необходимо авторизоваться перед входом!'}
                 return render(request, 'login_page.html', context)
         elif request.method == 'POST':
-            return redirect(logout_page)
+            print('Нажата кнопка ЗАГРУЗИТЬ ДАННЫЕ')
+            return render(request, 'app_mainpage.html')
+            #return redirect(logout_page)
         else:
             raise Exception
     except Exception:
