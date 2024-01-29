@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db import utils
 from django.contrib.auth.decorators import login_required
-
+from .models import App_mainpage_states
 # Create your views here.
 
 def login_page(request):
@@ -21,7 +21,7 @@ def login_page(request):
                     return render(request, 'login_page.html', context)
 
                 login(request, user)
-                return render(request, 'app_mainpage.html')
+                return redirect(app_mainpage)
         except Exception:
             context = {'text': 'Ошибка авторизации!'}
             return render(request, 'login_page.html', context)
@@ -62,11 +62,15 @@ def app_mainpage(request):
                 context = {'text': 'Необходимо авторизоваться перед входом!'}
                 return render(request, 'login_page.html', context)
         elif request.method == 'POST':
-            print('Нажата кнопка ЗАГРУЗИТЬ ДАННЫЕ')
-            return render(request, 'app_mainpage.html')
+            print(f'Нажата кнопка ЗАГРУЗИТЬ ДАННЫЕ!')
+            print(f'{request.POST}')
+            elementsState = App_mainpage_states()
+            #elementsState.
+            return redirect(app_mainpage)
             #return redirect(logout_page)
         else:
             raise Exception
-    except Exception:
+    except Exception as ex:
+        print(ex)
         context = {'text': 'Ошибка входа! Попробуйте авторизоваться повторно!'}
         return render(request, 'login_page.html', context)

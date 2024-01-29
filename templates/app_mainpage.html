@@ -149,7 +149,8 @@
         </div>
       </div>
 
-      <form method="POST" action="{% url 'app_mainpage' %}" style="">
+      <form method="POST" action="/app_mainpage" style="">
+          {% csrf_token %}
           <!-- Unnamed (Checkbox) -->
           <div id="u15" class="ax_default checkbox">
             <label id="u15_input_label" for="u15_input" style="position: absolute; left: 0px;">
@@ -158,7 +159,7 @@
                 <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Myfin</span></p>
               </div>
             </label>
-            <input id="u15_input" type="checkbox" value="checkbox"/>
+            <input id="u15_input" type="checkbox" value="checked" name="sitelist_checkBox_myfin"/>
           </div>
 
           <!-- Unnamed (Image) -->
@@ -177,7 +178,7 @@
                 <p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-size:14px;">Kucoin</span></p>
               </div>
             </label>
-            <input id="u17_input" type="checkbox" value="checkbox"/>
+            <input id="u17_input" type="checkbox" value="checked" name="sitelist_checkBox_kucoin"/>
           </div>
 
           <!-- Unnamed (Image) -->
@@ -196,7 +197,7 @@
                 <p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-size:14px;">Coinbase</span></p>
               </div>
             </label>
-            <input id="u19_input" type="checkbox" value="checkbox"/>
+            <input id="u19_input" type="checkbox" value="checked" name="sitelist_checkBox_coinbase"/>
           </div>
 
           <!-- Unnamed (Image) -->
@@ -215,7 +216,7 @@
                 <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Huobi</span></p>
               </div>
             </label>
-            <input id="u21_input" type="checkbox" value="checkbox"/>
+            <input id="u21_input" type="checkbox" value="checked" name="sitelist_checkBox_huobi"/>
           </div>
 
           <!-- Unnamed (Image) -->
@@ -227,7 +228,6 @@
           </div>
 
           <!-- Unnamed (Rectangle) -->
-          {% csrf_token %}
           <button type="submit" class="btn btn-primary" style="">
               <div id="u23" class="ax_default button">
                 <div id="u23_div" class=""></div>
