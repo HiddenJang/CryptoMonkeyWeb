@@ -4,6 +4,10 @@ from django.contrib.auth.models import User
 from django.db import utils
 from django.contrib.auth.decorators import login_required
 from .models import App_mainpage_states
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .serializers import MainpageStatesSerializer
 # Create your views here.
 
 def login_page(request):
@@ -64,13 +68,25 @@ def app_mainpage(request):
         elif request.method == 'POST':
             print(f'Нажата кнопка ЗАГРУЗИТЬ ДАННЫЕ!')
             print(f'{request.POST}')
-            elementsState = App_mainpage_states()
-            #elementsState.
+            mainpage_data = dict(request.POST)
+            mainpage_data.pop('csrfmiddlewaretoken')
+            for data in mainpage_data:
+                print(data)
+                elementsState = App_mainpage_states()
+                elementsState.widget = data.split('_')[0]
+                elementsState.elementType = data.split('_')[1]
+                elementsState.elementValue = mainpage_data[data][0]
+                elementsState.save()
             return redirect(app_mainpage)
-            #return redirect(logout_page)
         else:
             raise Exception
-    except Exception as ex:
-        print(ex)
+    except Exception:
         context = {'text': 'Ошибка входа! Попробуйте авторизоваться повторно!'}
         return render(request, 'login_page.html', context)
+
+class MainpageStates_api(APIView):
+
+    def get(self, request):
+        states = App_mainpage_states.objects.all()
+        serializer = MainpageStatesSerializer(states, many=True)
+        return Response(serializer.data)

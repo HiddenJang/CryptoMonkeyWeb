@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import MainpageStates_api
 
 urlpatterns = [
     path('', views.login_page, name='login_page'),
@@ -14,6 +15,7 @@ urlpatterns = [
     path('registration/', views.registration_page, name='registration_page'),
     path('app_mainpage', views.app_mainpage, name='app_mainpage'),
     path('app_mainpage/', views.app_mainpage, name='app_mainpage'),
+    path('api/v1/states', MainpageStates_api.as_view(), name='mainpageStates')
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
