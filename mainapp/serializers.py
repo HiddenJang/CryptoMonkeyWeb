@@ -7,4 +7,5 @@ class MainpageStatesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = App_mainpage_states
-        fields = ['id', 'widget', 'elementType', 'elementValue']
+        fields = '__all__'
+        #fields = ['id', 'widget', 'elementType', 'elementValue']

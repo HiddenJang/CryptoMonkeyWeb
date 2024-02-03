@@ -2,12 +2,21 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db import utils
+from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
-from .models import App_mainpage_states
+from django.middleware.csrf import get_token
 
 from rest_framework.views import APIView
+from rest_framework import viewsets
+from rest_framework.decorators import api_view
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
+
+from .models import App_mainpage_states
 from .serializers import MainpageStatesSerializer
+
+from rest_framework.renderers import JSONRenderer
+import json
 # Create your views here.
 
 def login_page(request):
@@ -61,20 +70,22 @@ def app_mainpage(request):
     try:
         if request.method == 'GET':
             if request.user.is_authenticated:
-                return render(request, 'app_mainpage.html')
+                context = {}
+                csrf_token = get_token(request)
+                context['csrf_token'] = csrf_token
+                return render(request, 'app_mainpage.html', context)
             else:
                 context = {'text': 'Необходимо авторизоваться перед входом!'}
                 return render(request, 'login_page.html', context)
         elif request.method == 'POST':
             print(f'Нажата кнопка ЗАГРУЗИТЬ ДАННЫЕ!')
-            print(f'{request.POST}')
             mainpage_data = dict(request.POST)
             mainpage_data.pop('csrfmiddlewaretoken')
             for data in mainpage_data:
-                print(data)
                 elementsState = App_mainpage_states()
                 elementsState.widget = data.split('_')[0]
                 elementsState.elementType = data.split('_')[1]
+                elementsState.elementName = data.split('_')[2]
                 elementsState.elementValue = mainpage_data[data][0]
                 elementsState.save()
             return redirect(app_mainpage)
@@ -84,9 +95,37 @@ def app_mainpage(request):
         context = {'text': 'Ошибка входа! Попробуйте авторизоваться повторно!'}
         return render(request, 'login_page.html', context)
 
-class MainpageStates_api(APIView):
+@api_view(['POST'])
+@csrf_exempt
+def infoResult(request):
+    if request.method == 'POST':
+        print('infoResult=', request.method, request.POST)
+        mainpage_data = dict(request.POST)
+        return JsonResponse({"mainpage_data": mainpage_data}, safe=False)
+    else:
+        print('редирект на mainpage')
+        return redirect(app_mainpage)
 
-    def get(self, request):
-        states = App_mainpage_states.objects.all()
-        serializer = MainpageStatesSerializer(states, many=True)
-        return Response(serializer.data)
+#_____________API______________#
+
+class MainpageStates_api(viewsets.ModelViewSet):
+    queryset = App_mainpage_states.objects.all()
+    serializer_class = MainpageStatesSerializer
+    http_method_names = ['get']
+
+    # def get(self, request):
+    #     states = App_mainpage_states.objects.all()
+    #     serializer = MainpageStatesSerializer(states, many=True)
+        #return Response(serializer.data)
+
+class PostRequest_api(viewsets.ModelViewSet):
+    queryset = App_mainpage_states.objects.all()
+    serializer_class = MainpageStatesSerializer
+    http_method_names = ['post']
+
+
+@api_view(['GET'])
+def mainpageStates_api(request):
+    app_mainpage_states = App_mainpage_states.objects.all()
+    serializer = MainpageStatesSerializer(app_mainpage_states, many=True)
+    return Response(serializer.data)

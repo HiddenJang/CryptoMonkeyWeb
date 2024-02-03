@@ -45,6 +45,29 @@
       $axure.utils.getOtherPath = function() { return "{% static 'app_mainpage/resources/Other.html' %}"; };
       $axure.utils.getReloadPath = function() { return "{% static 'app_mainpage/resources/reload.html' %}"; };
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% csrf_token %}
+    <script>
+     $(document).ready(function() {
+        $('#sitelist_form').submit(function(e) {
+          //отмена действия по умолчанию для кнопки submit
+          e.preventDefault();
+          let $form = $('sitelist_form');
+          $.ajax({
+            type: 'POST',
+            url: '/api/v1/post/',
+            data:  $('#sitelist_form').serialize(),
+            dataType: "json",
+            headers: {'X-CSRFToken': "{{ csrf_token }}"},
+            success: function (response) {
+              alert(Object.entries(response.mainpage_data));
+              console.log('Пиздец!!')
+            },
+        });
+      });
+    });
+    </script>
+
   </head>
   <body>
     <div id="base" class="">
@@ -149,7 +172,7 @@
         </div>
       </div>
 
-      <form method="POST" action="/app_mainpage" style="" name="sitelist_form">
+      <form method="POST" action="" style="" id="sitelist_form" >
           {% csrf_token %}
           <!-- Unnamed (Checkbox) -->
           <div id="u15" class="ax_default checkbox">
@@ -159,7 +182,7 @@
                 <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Myfin</span></p>
               </div>
             </label>
-            <input id="u15_input" type="checkbox" value="checked" name="sitelist_checkBox_myfin"/>
+            <input id="u15_input" type="checkbox" value="checked" class="u15_inp" name="sitelist_checkBox_myfin"/>
           </div>
 
           <!-- Unnamed (Image) -->
@@ -228,7 +251,7 @@
           </div>
 
           <!-- Unnamed (Rectangle) -->
-          <button type="submit" class="btn btn-primary" style="">
+          <button id="load-button" type="submit" class="btn btn-primary" style="">
               <div id="u23" class="ax_default button">
                 <div id="u23_div" class=""></div>
                 <div id="u23_text" class="text ">
@@ -277,7 +300,7 @@
         <div id="u29" class="ax_default table_cell">
           <img id="u29_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u29.png' %}"/>
           <div id="u29_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
+            <p id="table-cell"> {{ mainpage_data }} </p>
           </div>
         </div>
 
