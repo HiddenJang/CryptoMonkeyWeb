@@ -83,49 +83,60 @@ def app_mainpage(request):
             mainpage_data.pop('csrfmiddlewaretoken')
             for data in mainpage_data:
                 elementsState = App_mainpage_states()
-                elementsState.widget = data.split('_')[0]
-                elementsState.elementType = data.split('_')[1]
-                elementsState.elementName = data.split('_')[2]
+                elementsState.elementName = data
                 elementsState.elementValue = mainpage_data[data][0]
                 elementsState.save()
             return redirect(app_mainpage)
         else:
             raise Exception
-    except Exception:
+    except Exception as ex:
+        print(ex)
         context = {'text': 'Ошибка входа! Попробуйте авторизоваться повторно!'}
         return render(request, 'login_page.html', context)
 
-@api_view(['POST'])
-@csrf_exempt
-def infoResult(request):
-    if request.method == 'POST':
-        print('infoResult=', request.method, request.POST)
-        mainpage_data = dict(request.POST)
-        return JsonResponse({"mainpage_data": mainpage_data}, safe=False)
-    else:
-        print('редирект на mainpage')
-        return redirect(app_mainpage)
+# @api_view(['POST'])
+# @csrf_exempt
+# def infoResult(request):
+#     if request.method == 'POST':
+#         print('infoResult=', request.method, request.POST)
+#         mainpage_data = dict(request.POST)
+#         return JsonResponse({"mainpage_data": mainpage_data}, safe=False)
+#     else:
+#         print('редирект на mainpage')
+#         return redirect(app_mainpage)
 
 #_____________API______________#
 
-class MainpageStates_api(viewsets.ModelViewSet):
-    queryset = App_mainpage_states.objects.all()
-    serializer_class = MainpageStatesSerializer
-    http_method_names = ['get']
+class MainpageStates_api(APIView):
 
-    # def get(self, request):
-    #     states = App_mainpage_states.objects.all()
-    #     serializer = MainpageStatesSerializer(states, many=True)
-        #return Response(serializer.data)
+    def post(self, request):
+        mainpage_data = dict(request.POST)
+        print(mainpage_data)
+        mainpage_data.pop('csrfmiddlewaretoken', 'key not found')
+        for data in mainpage_data:
+            if App_mainpage_states.objects.filter(elementName=data).exists():
+                elementsState = App_mainpage_states.objects.filter(elementName=data).first()
+                elementsState.elementValue = mainpage_data[data][0]
+                print('Row updated')
+            else:
+                elementsState = App_mainpage_states()
+                elementsState.elementName = data
+                elementsState.elementValue = mainpage_data[data][0]
+                print('Row created')
+            elementsState.save()
+        return JsonResponse({"Success": "true"}, status=200)
 
-class PostRequest_api(viewsets.ModelViewSet):
-    queryset = App_mainpage_states.objects.all()
-    serializer_class = MainpageStatesSerializer
-    http_method_names = ['post']
 
 
-@api_view(['GET'])
-def mainpageStates_api(request):
-    app_mainpage_states = App_mainpage_states.objects.all()
-    serializer = MainpageStatesSerializer(app_mainpage_states, many=True)
-    return Response(serializer.data)
+
+# class PostRequest_api(viewsets.ModelViewSet):
+#     queryset = App_mainpage_states.objects.all()
+#     serializer_class = MainpageStatesSerializer
+#     http_method_names = ['post']
+
+
+# @api_view(['GET'])
+# def mainpageStates_api(request):
+#     app_mainpage_states = App_mainpage_states.objects.all()
+#     serializer = MainpageStatesSerializer(app_mainpage_states, many=True)
+#     return Response(serializer.data)

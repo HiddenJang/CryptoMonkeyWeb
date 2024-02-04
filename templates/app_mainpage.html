@@ -2,6 +2,7 @@
 {% load static %}
 <html>
   <head>
+
     <title>MainWindow</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
@@ -45,30 +46,12 @@
       $axure.utils.getOtherPath = function() { return "{% static 'app_mainpage/resources/Other.html' %}"; };
       $axure.utils.getReloadPath = function() { return "{% static 'app_mainpage/resources/reload.html' %}"; };
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    {% csrf_token %}
-    <script>
-     $(document).ready(function() {
-        $('#sitelist_form').submit(function(e) {
-          //отмена действия по умолчанию для кнопки submit
-          e.preventDefault();
-          let $form = $('sitelist_form');
-          $.ajax({
-            type: 'POST',
-            url: '/api/v1/post/',
-            data:  $('#sitelist_form').serialize(),
-            dataType: "json",
-            headers: {'X-CSRFToken': "{{ csrf_token }}"},
-            success: function (response) {
-              alert(Object.entries(response.mainpage_data));
-              console.log('Пиздец!!')
-            },
-        });
-      });
-    });
-    </script>
+
+      <!-- Обработчик форм -->
+    {% include "AJAX.html" %}
 
   </head>
+
   <body>
     <div id="base" class="">
 
@@ -299,15 +282,15 @@
         <!-- Unnamed (Table Cell) -->
         <div id="u29" class="ax_default table_cell">
           <img id="u29_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u29.png' %}"/>
-          <div id="u29_text" class="text " style="display:none; visibility: hidden">
-            <p id="table-cell"> {{ mainpage_data }} </p>
+          <div id="u29_t" class="text ">
+            <p id="u29_p"></p>
           </div>
         </div>
 
         <!-- Unnamed (Table Cell) -->
         <div id="u30" class="ax_default table_cell">
           <img id="u30_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u30.png' %}"/>
-          <div id="u30_text" class="text " style="display:none; visibility: hidden">
+          <div id="u30_text" class="text " >
             <p></p>
           </div>
         </div>
@@ -797,7 +780,7 @@
             <p><span>Включение телеграмм-бота</span></p>
           </div>
         </label>
-        <input id="u91_input" type="checkbox" value="checkbox"/>
+        <input id="u91_input" type="checkbox" value="checkbox" name="settings_checkBox_telegramBot"/>
       </div>
 
       <!-- Unnamed (Droplist) -->
@@ -822,7 +805,7 @@
                   <p><span>Циклическое обновление</span></p>
                 </div>
               </label>
-              <input id="u94_input" type="checkbox" value="checkbox"/>
+              <input id="u94_input" type="checkbox" value="checkbox" name="settings_checkBox_autoRefresh"/>
             </div>
           </div>
         </div>
@@ -870,7 +853,7 @@
       <!-- droplist_quotCoinInfo (Droplist) -->
       <div id="u99" class="ax_default droplist" data-label="droplist_quotCoinInfo">
         <div id="u99_div" class=""></div>
-        <select id="u99_input" class="u99_input">
+        <select id="u99_input" class="u99_input" name="settings_droplist_quotCoinInfo">
           <option class="u99_input_option" value="XRP">XRP</option>
           <option class="u99_input_option" value="BTC">BTC</option>
         </select>
@@ -879,7 +862,7 @@
       <!-- Unnamed (Droplist) -->
       <div id="u100" class="ax_default droplist">
         <div id="u100_div" class=""></div>
-        <select id="u100_input" class="u100_input">
+        <select id="u100_input" class="u100_input" name="settings_droplist_baseCoinInfo">
           <option class="u100_input_option" value="RUB">RUB</option>
           <option class="u100_input_option" value="USD">USD</option>
         </select>
@@ -947,7 +930,7 @@
             <p><span>Отображать все котировки</span></p>
           </div>
         </label>
-        <input id="u108_input" type="checkbox" value="checkbox"/>
+        <input id="u108_input" type="checkbox" value="checkbox" name="settings_checkBox_allQuotationView"/>
       </div>
 
       <!-- Unnamed (Rectangle) -->

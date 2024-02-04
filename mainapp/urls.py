@@ -2,7 +2,7 @@ from django.urls import path, include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import MainpageStates_api, PostRequest_api
+from .views import MainpageStates_api
 
 from rest_framework import routers
 
@@ -23,7 +23,7 @@ urlpatterns = [
     path('app_mainpage', views.app_mainpage, name='app_mainpage'),
     path('app_mainpage/', views.app_mainpage, name='app_mainpage'),
     #path('', include(router.urls)),
-    path('api/v1/post/', views.infoResult)
+    path('api/v1/states/', MainpageStates_api.as_view())
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

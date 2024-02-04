@@ -1055,6 +1055,7 @@
   border-width:0px;
   word-wrap:break-word;
   text-transform:none;
+  visibility:hidden;
 }
 #u30_img {
   border-width:0px;
