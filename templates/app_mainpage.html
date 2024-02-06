@@ -6,6 +6,7 @@
     <title>MainWindow</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
     <link href="{% static 'app_mainpage/resources/css/axure_rp_page.css' %}" type="text/css" rel="stylesheet"/>
     <link href="{% static 'app_mainpage/data/styles.css' %}" type="text/css" rel="stylesheet"/>
     <link href="{% static 'app_mainpage/files/mainwindow/styles.css' %}" type="text/css" rel="stylesheet"/>
@@ -148,7 +149,7 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u14" class="ax_default label">
+      <div id="u14" class="ax_default label" id="siteList_dynamic>
         <img id="u14_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u14.svg' %}"/>
         <div id="u14_text" class="text ">
           <p><span>Выбор площадок</span></p>
@@ -868,15 +869,7 @@
         </select>
       </div>
 
-      <!-- Unnamed (Rectangle) -->
-      <div id="u101" class="ax_default button">
-        <div id="u101_div" class=""></div>
-        <div id="u101_text" class="text ">
-          <p><span>Ввести ключи API</span></p>
-        </div>
-      </div>
-
-      <!-- textInp_quotCoinSearch (Text Field) -->
+       <!-- textInp_quotCoinSearch (Text Field) -->
       <div id="u102" class="ax_default text_field" data-label="textInp_quotCoinSearch">
         <div id="u102_div" class=""></div>
         <input id="u102_input" type="text" value="" class="u102_input"/>
@@ -932,6 +925,34 @@
         </label>
         <input id="u108_input" type="checkbox" value="checkbox" name="settings_checkBox_allQuotationView"/>
       </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <div id="u101" class="ax_default button">
+            <div id="u101_div" class=""></div>
+            <div id="u101_text" class="text ">
+              <p><span>Ввести ключи API</span></p>
+            </div>
+          </div>
+      </button>
+    <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Модальное окно</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u109" class="ax_default label">
@@ -1290,5 +1311,7 @@
       </div>
     </div>
     <script src="{% static 'app_mainpage/resources/scripts/axure/ios.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
   </body>
 </html>

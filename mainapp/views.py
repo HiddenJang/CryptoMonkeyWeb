@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db import utils
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.middleware.csrf import get_token
+from django.template.loader import render_to_string
 
 from rest_framework.views import APIView
 from rest_framework import viewsets
@@ -126,7 +127,13 @@ class MainpageStates_api(APIView):
             elementsState.save()
         return JsonResponse({"Success": "true"}, status=200)
 
+class ApikeysInput_api(APIView):
 
+    def get(self, request):
+        context = {}
+        csrf_token = get_token(request)
+        context['csrf_token'] = csrf_token
+        return JsonResponse({"Html": render_to_string("login_page.html", context)})
 
 
 # class PostRequest_api(viewsets.ModelViewSet):
