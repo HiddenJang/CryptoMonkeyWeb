@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1450px" height="105px" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient cx="720" cy="-2.1600499167107E-13" r="724.893979138836" gradientTransform="matrix(-1 -1.9604045728293E-17 6.20794781395944E-18 -0.316666666666667 1440 -2.70291659442539E-13 )" gradientUnits="userSpaceOnUse" id="RadialGradient82">
-      <stop id="Stop83" stop-color="#ffffff" offset="0" />
-      <stop id="Stop84" stop-color="#d9001b" offset="1" />
+    <radialGradient cx="720" cy="-2.1600499167107E-13" r="724.893979138836" gradientTransform="matrix(-1 -1.9604045728293E-17 6.20794781395944E-18 -0.316666666666667 1440 -2.70291659442539E-13 )" gradientUnits="userSpaceOnUse" id="RadialGradient374">
+      <stop id="Stop375" stop-color="#ffffff" offset="0" />
+      <stop id="Stop376" stop-color="#d9001b" offset="1" />
     </radialGradient>
-    <filter x="0px" y="0px" width="1450px" height="105px" filterUnits="userSpaceOnUse" id="filter85">
+    <filter x="0px" y="0px" width="1450px" height="105px" filterUnits="userSpaceOnUse" id="filter377">
       <feOffset dx="5" dy="5" in="SourceAlpha" result="shadowOffsetInner" />
       <feGaussianBlur stdDeviation="2.5" in="shadowOffsetInner" result="shadowGaussian" />
       <feComposite in2="shadowGaussian" operator="atop" in="SourceAlpha" result="shadowComposite" />
       <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.349019607843137 0  " in="shadowComposite" />
     </filter>
-    <g id="widget86">
-      <path d="M 0.5 0.5  L 1439.5 0.5  L 1439.5 94.5  L 0.5 94.5  L 0.5 0.5  Z " fill-rule="nonzero" fill="url(#RadialGradient82)" stroke="none" />
+    <g id="widget378">
+      <path d="M 0.5 0.5  L 1439.5 0.5  L 1439.5 94.5  L 0.5 94.5  L 0.5 0.5  Z " fill-rule="nonzero" fill="url(#RadialGradient374)" stroke="none" />
       <path d="M 0.5 0.5  L 1439.5 0.5  L 1439.5 94.5  L 0.5 94.5  L 0.5 0.5  Z " stroke-width="1" stroke="#797979" fill="none" />
     </g>
   </defs>
   <g>
-    <use xlink:href="#widget86" filter="url(#filter85)" />
-    <use xlink:href="#widget86" />
+    <use xlink:href="#widget378" filter="url(#filter377)" />
+    <use xlink:href="#widget378" />
   </g>
 </svg>

@@ -1,22 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="408px" height="550px" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="600px" height="247px" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient gradientUnits="userSpaceOnUse" x1="199" y1="0" x2="199" y2="540" id="LinearGradient77">
-      <stop id="Stop78" stop-color="#f2f2f2" stop-opacity="0.996078431372549" offset="0" />
-      <stop id="Stop79" stop-color="#d9001b" offset="1" />
+    <linearGradient gradientUnits="userSpaceOnUse" x1="611" y1="235.29" x2="611" y2="401" id="LinearGradient361">
+      <stop id="Stop362" stop-color="#d9001b" offset="0" />
+      <stop id="Stop363" stop-color="#ffffff" offset="1" />
     </linearGradient>
-    <filter x="0px" y="0px" width="408px" height="550px" filterUnits="userSpaceOnUse" id="filter80">
-      <feOffset dx="5" dy="5" in="SourceAlpha" result="shadowOffsetInner" />
+    <linearGradient gradientUnits="userSpaceOnUse" x1="611" y1="262.53" x2="611" y2="401" id="LinearGradient364">
+      <stop id="Stop365" stop-color="#d9001b" offset="0" />
+      <stop id="Stop366" stop-color="#ffffff" offset="1" />
+    </linearGradient>
+    <filter x="321px" y="174px" width="600px" height="247px" filterUnits="userSpaceOnUse" id="filter367">
+      <feOffset dx="15" dy="15" in="SourceAlpha" result="shadowOffsetInner" />
       <feGaussianBlur stdDeviation="2.5" in="shadowOffsetInner" result="shadowGaussian" />
       <feComposite in2="shadowGaussian" operator="atop" in="SourceAlpha" result="shadowComposite" />
       <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.349019607843137 0  " in="shadowComposite" />
     </filter>
-    <g id="widget81">
-      <path d="M 1 1  L 397 1  L 397 539  L 1 539  L 1 1  Z " fill-rule="nonzero" fill="url(#LinearGradient77)" stroke="none" />
+    <g id="widget368">
+      <path d="M 323.5 194  A 17.5 17.5 0 0 1 341 176.5 L 881 176.5  A 17.5 17.5 0 0 1 898.5 194 L 898.5 381  A 17.5 17.5 0 0 1 881 398.5 L 341 398.5  A 17.5 17.5 0 0 1 323.5 381 L 323.5 194  Z " fill-rule="nonzero" fill="url(#LinearGradient361)" stroke="none" />
+      <path d="M 322.5 194  A 18.5 18.5 0 0 1 341 175.5 L 881 175.5  A 18.5 18.5 0 0 1 899.5 194 L 899.5 381  A 18.5 18.5 0 0 1 881 399.5 L 341 399.5  A 18.5 18.5 0 0 1 322.5 381 L 322.5 194  Z " stroke-width="3" stroke="url(#LinearGradient364)" fill="none" />
     </g>
   </defs>
-  <g>
-    <use xlink:href="#widget81" filter="url(#filter80)" />
-    <use xlink:href="#widget81" />
+  <g transform="matrix(1 0 0 1 -321 -174 )">
+    <use xlink:href="#widget368" filter="url(#filter367)" />
+    <use xlink:href="#widget368" />
   </g>
 </svg>

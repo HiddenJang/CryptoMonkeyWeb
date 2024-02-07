@@ -91,7 +91,7 @@ def app_mainpage(request):
         else:
             raise Exception
     except Exception as ex:
-        print(ex)
+        print(f'mainpage except {ex}')
         context = {'text': 'Ошибка входа! Попробуйте авторизоваться повторно!'}
         return render(request, 'login_page.html', context)
 
