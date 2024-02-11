@@ -29,7 +29,6 @@
               $('#u39_p').append('<span id="u39_s"></span>');
               $('#u39_s').text(dat);
               //$('#table-cell').text(Object.entries(response.mainpage_data).join('\n'))
-              //console.log('Пиздец!!')
             },
         });
       });
@@ -39,8 +38,8 @@
 <!-- Обработчик checkBox ВКЛЮЧЕНИЕ ТЕЛЕГРАММ БОТА -->
 <script>
     $(document).ready(function() {
-        $('#u91_input').click(function() {
-          var settings_checkBox_telegramBot = $('#u91_input[name=settings_checkBox_telegramBot]').is(':checked');
+        $('#u101_input').click(function() {
+          var settings_checkBox_telegramBot = $('#u101_input[name=settings_checkBox_telegramBot]').is(':checked');
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
@@ -51,8 +50,8 @@
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u29_p').append('<span id="u29_s"></span>');
-              $('#u29_s').text(dat);
+              $('#u39_p').append('<span id="u39_s"></span>');
+              $('#u39_s').text(dat);
             },
         });
       });
@@ -62,8 +61,8 @@
 <!-- Обработчик checkBox ЦИКЛИЧЕСКОЕ ОБНОВЛЕНИЕ -->
 <script>
     $(document).ready(function() {
-        $('#u94_input').click(function() {
-          var settings_checkBox_autoRefresh = $('#u94_input[name=settings_checkBox_autoRefresh]').is(':checked');
+        $('#u104_input').click(function() {
+          var settings_checkBox_autoRefresh = $('#u104_input[name=settings_checkBox_autoRefresh]').is(':checked');
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
@@ -74,8 +73,8 @@
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u29_p').append('<span id="u29_s"></span>');
-              $('#u29_s').text(dat);
+              $('#u39_p').append('<span id="u39_s"></span>');
+              $('#u39_s').text(dat);
             },
         });
       });
@@ -85,8 +84,8 @@
 <!-- Обработчик checkBox ОТОБРАЖАТЬ ВСЕ КОТИРОВКИ-->
 <script>
     $(document).ready(function() {
-        $('#u108_input').click(function() {
-          var settings_checkBox_allQuotationView = $('#u108_input[name=settings_checkBox_allQuotationView]').is(':checked');
+        $('#u118_input').click(function() {
+          var settings_checkBox_allQuotationView = $('#u118_input[name=settings_checkBox_allQuotationView]').is(':checked');
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
@@ -97,8 +96,8 @@
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u29_p').append('<span id="u29_s"></span>');
-              $('#u29_s').text(dat);
+              $('#u39_p').append('<span id="u39_s"></span>');
+              $('#u39_s').text(dat);
             },
         });
       });
@@ -108,20 +107,20 @@
 <!-- Обработчик dropList КОТИРУЕМАЯ ВАЛЮТА-->
 <script>
     $(document).ready(function() {
-        $('#u99_input').change(function() {
-          var settings_droplist_quotCoinInfo = $('#u99_input[name=settings_droplist_quotCoinInfo]').val();
+        $('#u109_input').change(function() {
+          var settings_droplist_quotCoin = $('#u109_input[name=settings_droplist_quotCoin]').val();
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
             data: {
-                'settings_droplist_quotCoinInfo': settings_droplist_quotCoinInfo,
+                'settings_droplist_quotCoin': settings_droplist_quotCoin,
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u29_p').append('<span id="u29_s"></span>');
-              $('#u29_s').text(dat);
+              $('#u39_p').append('<span id="u39_s"></span>');
+              $('#u39_s').text(dat);
             },
         });
       });
@@ -131,33 +130,203 @@
 <!-- Обработчик dropList БАЗОВАЯ ВАЛЮТА-->
 <script>
     $(document).ready(function() {
-        $('#u100_input').change(function() {
-          var settings_droplist_baseCoinInfo = $('#u100_input[name=settings_droplist_baseCoinInfo]').val();
+        $('#u110_input').change(function() {
+          var settings_droplist_baseCoin = $('#u110_input[name=settings_droplist_baseCoin]').val();
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
             data: {
-                'settings_droplist_baseCoinInfo': settings_droplist_baseCoinInfo,
+                'settings_droplist_baseCoin': settings_droplist_baseCoin,
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u29_p').append('<span id="u29_s"></span>');
-              $('#u29_s').text(dat);
+              $('#u39_p').append('<span id="u39_s"></span>');
+              $('#u39_s').text(dat);
             },
         });
       });
     });
 </script>
 
-<!-- Обработчик button ВВЕСТИ КЛЮЧИ API-->
+<!-- Обработчики textInput ПОИСК ПО НАЗВАНИЮ КОТИРУЕМОЙ ВАЛЮТЫ -->
+<!-- ПОИСК -->
 <script>
     $(document).ready(function() {
-        $('#APIkeysInput-button').click(function() {
-          $('.keys-input-modal-overlay').css({'visibility': 'visible', 'opacity': 1});
-		  $('.keys-input-modal-modal').css({'visibility': 'visible', 'opacity': 1});
-        };
+        $('#settings_quotCoinSearch-button').click(function() {
+          var settings_textInp_quotCoinSearch = $('#u112 input[name=settings_textInp_quotCoinSearch]').val();
+          $.ajax({
+            type: 'POST',
+            url: '/api/v1/states/',
+            data: {
+                'settings_textInp_quotCoinSearch': settings_textInp_quotCoinSearch,
+        },
+            dataType: "json",
+            headers: {'X-CSRFToken': "{{ csrf_token }}"},
+            success: function (response) {
+              var dat = response.Success;
+              $('#u39_p').append('<span id="u39_s"></span>');
+              $('#u39_s').text(dat);
+            },
+        });
+      });
     });
 </script>
 
+<!-- ДОБАВИТЬ -->
+<script>
+    $(document).ready(function() {
+        $('#settings_quotCoinAdd-button').click(function() {
+          var settings_textInp_quotCoinAdd = $('#u112 input[name=settings_textInp_quotCoinSearch]').val();
+          $.ajax({
+            type: 'POST',
+            url: '/api/v1/states/',
+            data: {
+                'settings_textInp_quotCoinAdd': settings_textInp_quotCoinAdd,
+        },
+            dataType: "json",
+            headers: {'X-CSRFToken': "{{ csrf_token }}"},
+            success: function (response) {
+              var dat = response.Success;
+              $('#u39_p').append('<span id="u39_s"></span>');
+              $('#u39_s').text(dat);
+            },
+        });
+      });
+    });
+</script>
+
+<!-- УДАЛИТЬ -->
+<script>
+    $(document).ready(function() {
+        $('#settings_quotCoinDelete-button').click(function() {
+          var settings_textInp_quotCoinDelete = $('#u112 input[name=settings_textInp_quotCoinSearch]').val();
+          $.ajax({
+            type: 'POST',
+            url: '/api/v1/states/',
+            data: {
+                'settings_textInp_quotCoinDelete': settings_textInp_quotCoinDelete,
+        },
+            dataType: "json",
+            headers: {'X-CSRFToken': "{{ csrf_token }}"},
+            success: function (response) {
+              var dat = response.Success;
+              $('#u39_p').append('<span id="u39_s"></span>');
+              $('#u39_s').text(dat);
+            },
+        });
+      });
+    });
+</script>
+
+<!-- Обработчик button УСТАНОВИТЬ время обновления парсеров-->
+<script>
+    $(document).ready(function() {
+        $('#settings_applyParsRefreshTime_button').click(function() {
+          var settings_spinBox_parsRefreshTime = $('#u155 input[name=settings_spinBox_parsRefreshTime]').val();
+          $.ajax({
+            type: 'POST',
+            url: '/api/v1/states/',
+            data: {
+                'settings_spinBox_parsRefreshTime': settings_spinBox_parsRefreshTime,
+        },
+            dataType: "json",
+            headers: {'X-CSRFToken': "{{ csrf_token }}"},
+            success: function (response) {
+              var dat = response.Success;
+              $('#u39_p').append('<span id="u39_s"></span>');
+              $('#u39_s').text(dat);
+            },
+        });
+      });
+    });
+</script>
+
+<!-- панель НАСТРОЙКИ АВТОМАТИЧЕСКОЙ ТОРГОВЛИ -->
+
+<!-- Обработчик button АВТОМАТИЧЕСКАЯ ТОРГОВЛЯ - РАЗМЕСТИТЬ ОРДЕР -->
+<script>
+    $(document).ready(function() {
+        $('#autoTradeSettings_button_placeOrder').click(function() {
+          var autoTradeSettings_dropList_exchangeType = $('#u102_input[name=autoTradeSettings_dropList_exchangeType]').val(),
+            autoTradeSettings_dropList_dealType = $('#u121_input[name=autoTradeSettings_dropList_dealType]').val(),
+            autoTradeSettings_dropList_orderType = $('#u123_input[name=autoTradeSettings_dropList_orderType]').val(),
+            autoTradeSettings_dropList_tradeQuotCoin = $('#u125_input[name=autoTradeSettings_dropList_tradeQuotCoin]').val(),
+            autoTradeSettings_dropList_tradeBaseCoin = $('#u127_input[name=autoTradeSettings_dropList_tradeBaseCoin]').val(),
+            autoTradeSettings_spinBox_buyAmount = $('#u131_input[name=autoTradeSettings_spinBox_buyAmount]').val(),
+            autoTradeSettings_spinBox_currencyPrice = $('#u140_input[name=autoTradeSettings_spinBox_currencyPrice]').val();
+          $.ajax({
+            type: 'POST',
+            url: '/api/v1/states/',
+            data: {
+                'autoTradeSettings_dropList_exchangeType': autoTradeSettings_dropList_exchangeType,
+                'autoTradeSettings_dropList_dealType': autoTradeSettings_dropList_dealType,
+                'autoTradeSettings_dropList_orderType': autoTradeSettings_dropList_orderType,
+                'autoTradeSettings_dropList_tradeQuotCoin': autoTradeSettings_dropList_tradeQuotCoin,
+                'autoTradeSettings_dropList_tradeBaseCoin': autoTradeSettings_dropList_tradeBaseCoin,
+                'autoTradeSettings_spinBox_buyAmount': autoTradeSettings_spinBox_buyAmount,
+                'autoTradeSettings_spinBox_currencyPrice': autoTradeSettings_spinBox_currencyPrice,
+        },
+            dataType: "json",
+            headers: {'X-CSRFToken': "{{ csrf_token }}"},
+            success: function (response) {
+              var dat = response.Success;
+              $('#u39_p').append('<span id="u39_s"></span>');
+              $('#u39_s').text(dat);
+            },
+        });
+      });
+    });
+</script>
+
+<!-- Обработчик checkBox АВТОМАТИЧЕСКАЯ ТОРГОВЛЯ - ВКЛЮЧИТЬ ИМИТАЦИЮ ТОРГОВЛИ -->
+<script>
+    $(document).ready(function() {
+        $('#u147_input').click(function() {
+          var autoTradeSettings_checkBox_enableImitatitonTrade = $('#u147_input[name=autoTradeSettings_checkBox_enableImitatitonTrade]').is(':checked');
+          $.ajax({
+            type: 'POST',
+            url: '/api/v1/states/',
+            data: {
+                'autoTradeSettings_checkBox_enableImitatitonTrade': autoTradeSettings_checkBox_enableImitatitonTrade,
+        },
+            dataType: "json",
+            headers: {'X-CSRFToken': "{{ csrf_token }}"},
+            success: function (response) {
+              var dat = response.Success;
+              $('#u39_p').append('<span id="u39_s"></span>');
+              $('#u39_s').text(dat);
+            },
+        });
+      });
+    });
+</script>
+
+<!-- модальное окно APIkeys_input_window -->
+<script>
+    $(document).ready(function() {
+        $('#u6').click(function() {
+          var APIkeysInputWindow_dropList_exchangeType = $('#u9 input[name=APIkeysInputWindow_dropList_exchangeType]').val(),
+              APIkeysInputWindow_textInp_apiKeyInput = $('#u2 input[name=APIkeysInputWindow_textInp_apiKeyInput]').val(),
+              APIkeysInputWindow_textInp_secretKeyInput = $('#u3 input[name=APIkeysInputWindow_textInp_secretKeyInput]').val();
+          $.ajax({
+            type: 'POST',
+            url: '/api/v1/states/',
+            data: {
+                'APIkeysInputWindow_dropList_exchangeType': APIkeysInputWindow_dropList_exchangeType,
+                'APIkeysInputWindow_textInp_apiKeyInput': APIkeysInputWindow_textInp_apiKeyInput,
+                'APIkeysInputWindow_textInp_secretKeyInput': APIkeysInputWindow_textInp_secretKeyInput,
+        },
+            dataType: "json",
+            headers: {'X-CSRFToken': "{{ csrf_token }}"},
+            success: function (response) {
+             if (this.data.APIkeysInputWindow_textInp_apiKeyInput != '' && this.data.APIkeysInputWindow_textInp_secretKeyInput != '') {
+                $('#u102_input').prop('disabled', false);
+                document.getElementById('u102').style.opacity = "0.9"
+             }
+            },
+        });
+      });
+    });
+</script>

@@ -66,13 +66,13 @@
         <!-- Unnamed (Text Field) -->
         <div id="u2" class="ax_default text_field">
           <div id="u2_div" class=""></div>
-          <input id="u2_input" type="text" value="" class="u2_input"/>
+          <input id="u2_input" type="text" value="" class="u2_input" name="APIkeysInputWindow_textInp_apiKeyInput" />
         </div>
 
         <!-- Unnamed (Text Field) -->
         <div id="u3" class="ax_default text_field">
           <div id="u3_div" class=""></div>
-          <input id="u3_input" type="text" value="" class="u3_input"/>
+          <input id="u3_input" type="text" value="" class="u3_input" name="APIkeysInputWindow_textInp_secretKeyInput" />
         </div>
 
         <!-- Unnamed (Rectangle) -->
@@ -92,12 +92,14 @@
         </div>
 
         <!-- Unnamed (Rectangle) -->
-        <div id="u6" class="ax_default button">
+        <div id="u6" class="ax_default button" style="cursor: pointer;">
           <div id="u6_div" class=""></div>
           <div id="u6_text" class="text ">
             <p><span>Сохранить</span></p>
           </div>
         </div>
+
+
 
         <!-- Unnamed (Rectangle) -->
         <div id="u7" class="ax_default label">
@@ -118,7 +120,7 @@
         <!-- Unnamed (Droplist) -->
         <div id="u9" class="ax_default droplist">
           <div id="u9_div" class=""></div>
-          <select id="u9_input" class="u9_input">
+          <select id="u9_input" class="u9_input" name="APIkeysInputWindow_dropList_exchangeType" >
             <option class="u9_input_option" value="Huobi">Huobi</option>
             <option class="u9_input_option" value="Kucoin">Kucoin</option>
             <option class="u9_input_option" value="Myfin">Myfin</option>
@@ -852,13 +854,13 @@
             <p><span>Включение телеграмм-бота</span></p>
           </div>
         </label>
-        <input id="u101_input" type="checkbox" value="checkbox"/>
+        <input id="u101_input" type="checkbox" value="checkbox" name="settings_checkBox_telegramBot"/>
       </div>
 
       <!-- Unnamed (Droplist) -->
       <div id="u102" class="ax_default droplist disabled">
         <div id="u102_div" class="disabled"></div>
-        <select id="u102_input" class="u102_input" disabled>
+        <select id="u102_input" class="u102_input" name="autoTradeSettings_dropList_exchangeType" disabled>
           <option class="u102_input_option" value="Huobi">Huobi</option>
           <option class="u102_input_option" value="Kucoin">Kucoin</option>
         </select>
@@ -877,7 +879,7 @@
                   <p><span>Циклическое обновление</span></p>
                 </div>
               </label>
-              <input id="u104_input" type="checkbox" value="checkbox"/>
+              <input id="u104_input" type="checkbox" value="checkbox" name="settings_checkBox_autoRefresh"/>
             </div>
           </div>
         </div>
@@ -922,10 +924,10 @@
         </div>
       </div>
 
-      <!-- droplist_quotCoinInfo (Droplist) -->
+      <!-- droplist_quotCoin (Droplist) -->
       <div id="u109" class="ax_default droplist" data-label="droplist_quotCoinInfo">
         <div id="u109_div" class=""></div>
-        <select id="u109_input" class="u109_input">
+        <select id="u109_input" class="u109_input" name="settings_droplist_quotCoin">
           <option class="u109_input_option" value="XRP">XRP</option>
           <option class="u109_input_option" value="BTC">BTC</option>
         </select>
@@ -934,7 +936,7 @@
       <!-- Unnamed (Droplist) -->
       <div id="u110" class="ax_default droplist">
         <div id="u110_div" class=""></div>
-        <select id="u110_input" class="u110_input">
+        <select id="u110_input" class="u110_input" name="settings_droplist_baseCoin">
           <option class="u110_input_option" value="RUB">RUB</option>
           <option class="u110_input_option" value="USD">USD</option>
         </select>
@@ -948,43 +950,50 @@
         </div>
       </div>
 
-      <!-- textInp_quotCoinSearch (Text Field) -->
-      <div id="u112" class="ax_default text_field" data-label="textInp_quotCoinSearch">
+      <!-- settings_textInp_quotCoinSearch (Text Field) -->
+      <div id="u112" class="ax_default text_field" data-label="settings_textInp_quotCoinSearch">
         <div id="u112_div" class=""></div>
-        <input id="u112_input" type="text" value="" class="u112_input"/>
+        <input id="u112_input" type="text" value="" class="u112_input" name="settings_textInp_quotCoinSearch"/>
       </div>
 
-      <!-- label_quotCoinSearch (Rectangle) -->
-      <div id="u113" class="ax_default label" data-label="label_quotCoinSearch">
+      <!-- settings_label_quotCoinSearch (Rectangle) -->
+      <div id="u113" class="ax_default label" data-label="settings_label_quotCoinSearch">
         <div id="u113_div" class=""></div>
         <div id="u113_text" class="text ">
           <p><span>Поиск по названию котируемой валюты</span></p>
         </div>
       </div>
 
-      <!-- button_quotCoinSearch (Rectangle) -->
-      <div id="u114" class="ax_default button" data-label="button_quotCoinSearch">
-        <div id="u114_div" class=""></div>
-        <div id="u114_text" class="text ">
-          <p><span>Поиск</span></p>
-        </div>
-      </div>
+      <!-- settings_button_quotCoinSearch (Rectangle) -->
+      <button id="settings_quotCoinSearch-button" type="submit" class="btn btn-primary" style="">
+          <div id="u114" class="ax_default button" data-label="settings_button_quotCoinSearch">
+            <div id="u114_div" class=""></div>
+            <div id="u114_text" class="text ">
+              <p><span>Поиск</span></p>
+            </div>
+          </div>
+      </button>
 
-      <!-- button_addQuotCoin (Rectangle) -->
-      <div id="u115" class="ax_default button" data-label="button_addQuotCoin">
-        <div id="u115_div" class=""></div>
-        <div id="u115_text" class="text ">
-          <p><span>Добавить валюту</span></p>
-        </div>
-      </div>
+      <!-- settings_button_addQuotCoin (Rectangle) -->
+      <button id="settings_quotCoinAdd-button" type="submit" class="btn btn-primary" style="">
+          <div id="u115" class="ax_default button" data-label="settings_button_addQuotCoin">
+            <div id="u115_div" class=""></div>
+            <div id="u115_text" class="text ">
+              <p><span>Добавить валюту</span></p>
+            </div>
+          </div>
+      </button>
 
-      <!-- button_deleteQuotCoin (Rectangle) -->
-      <div id="u116" class="ax_default button" data-label="button_deleteQuotCoin">
-        <div id="u116_div" class=""></div>
-        <div id="u116_text" class="text ">
-          <p><span>Удалить валюту</span></p>
-        </div>
-      </div>
+      <!-- settings_button_deleteQuotCoin (Rectangle) -->
+      <button id="settings_quotCoinDelete-button" type="submit" class="btn btn-primary" style="">
+          <div id="u116" class="ax_default button" data-label="settings_button_deleteQuotCoin">
+            <div id="u116_div" class=""></div>
+            <div id="u116_text" class="text ">
+              <p><span>Удалить валюту</span></p>
+            </div>
+          </div>
+      </button>
+
 
       <!-- Unnamed (Line) -->
       <div id="u117" class="ax_default line">
@@ -1002,7 +1011,7 @@
             <p><span>Отображать все котировки</span></p>
           </div>
         </label>
-        <input id="u118_input" type="checkbox" value="checkbox"/>
+        <input id="u118_input" type="checkbox" value="checkbox" name="settings_checkBox_allQuotationView"/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -1024,7 +1033,7 @@
       <!-- Unnamed (Droplist) -->
       <div id="u121" class="ax_default droplist disabled">
         <div id="u121_div" class="disabled"></div>
-        <select id="u121_input" class="u121_input" disabled>
+        <select id="u121_input" class="u121_input" name="autoTradeSettings_dropList_dealType" disabled>
           <option class="u121_input_option" value="Покупка">Покупка</option>
           <option class="u121_input_option" value="Продажа">Продажа</option>
         </select>
@@ -1041,7 +1050,7 @@
       <!-- Unnamed (Droplist) -->
       <div id="u123" class="ax_default droplist disabled">
         <div id="u123_div" class="disabled"></div>
-        <select id="u123_input" class="u123_input" disabled>
+        <select id="u123_input" class="u123_input" name="autoTradeSettings_dropList_orderType" disabled>
           <option class="u123_input_option" value="Лимитный">Лимитный</option>
           <option class="u123_input_option" value="Рыночный">Рыночный</option>
         </select>
@@ -1058,7 +1067,7 @@
       <!-- Unnamed (Droplist) -->
       <div id="u125" class="ax_default droplist disabled">
         <div id="u125_div" class="disabled"></div>
-        <select id="u125_input" class="u125_input" disabled>
+        <select id="u125_input" class="u125_input" name="autoTradeSettings_dropList_tradeQuotCoin" disabled>
           <option class="u125_input_option" value="XRP">XRP</option>
           <option class="u125_input_option" value="BTC">BTC</option>
         </select>
@@ -1075,7 +1084,7 @@
       <!-- Unnamed (Droplist) -->
       <div id="u127" class="ax_default droplist disabled">
         <div id="u127_div" class="disabled"></div>
-        <select id="u127_input" class="u127_input" disabled>
+        <select id="u127_input" class="u127_input" name="autoTradeSettings_dropList_tradeBaseCoin" disabled>
           <option class="u127_input_option" value="USDT">USDT</option>
           <option class="u127_input_option" value="USD">USD</option>
           <option class="u127_input_option" value="RUB">RUB</option>
@@ -1103,7 +1112,7 @@
       <!-- Numbers (Text Field) -->
       <div id="u131" class="ax_default text_field disabled" data-label="Numbers">
         <div id="u131_div" class="disabled"></div>
-        <input id="u131_input" type="text" value="0" class="u131_input" disabled/>
+        <input id="u131_input" type="text" value="0" class="u131_input" name="autoTradeSettings_spinBox_buyAmount" disabled/>
       </div>
 
       <!-- Plus (Dynamic Panel) -->
@@ -1176,7 +1185,7 @@
       <!-- Numbers (Text Field) -->
       <div id="u140" class="ax_default text_field disabled" data-label="Numbers">
         <div id="u140_div" class="disabled"></div>
-        <input id="u140_input" type="text" value="0" class="u140_input" disabled/>
+        <input id="u140_input" type="text" value="0" class="u140_input" name="autoTradeSettings_spinBox_currencyPrice" disabled/>
       </div>
 
       <!-- Plus (Dynamic Panel) -->
@@ -1244,7 +1253,7 @@
             <p><span>Включить имитацию торговли</span></p>
           </div>
         </label>
-        <input id="u147_input" type="checkbox" value="checkbox"/>
+        <input id="u147_input" type="checkbox" value="checkbox" name="autoTradeSettings_checkBox_enableImitatitonTrade" />
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -1264,12 +1273,14 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u150" class="ax_default button disabled">
-        <div id="u150_div" class="disabled"></div>
-        <div id="u150_text" class="text ">
-          <p><span>Разместить ордер</span></p>
-        </div>
-      </div>
+       <button id="autoTradeSettings_button_placeOrder" type="submit" class="btn btn-primary" style="">
+          <div id="u150" class="ax_default button disabled">
+            <div id="u150_div" class="disabled"></div>
+            <div id="u150_text" class="text ">
+              <p><span>Разместить ордер</span></p>
+            </div>
+          </div>
+       </button>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u151" class="ax_default button">
@@ -1287,13 +1298,16 @@
         </div>
       </div>
 
-      <!-- Button_applyParsRefreshTime (Rectangle) -->
-      <div id="u153" class="ax_default button" data-label="Button_applyParsRefreshTime">
-        <div id="u153_div" class=""></div>
-        <div id="u153_text" class="text ">
-          <p><span>Установить</span></p>
-        </div>
-      </div>
+      <!-- settings_applyParsRefreshTime_button (Rectangle) -->
+      <button id="settings_applyParsRefreshTime_button" type="submit" class="btn btn-primary" style="">
+          {% csrf_token %}
+          <div id="u153" class="ax_default button" data-label="settings_applyParsRefreshTime_button">
+            <div id="u153_div" class=""></div>
+            <div id="u153_text" class="text ">
+              <p><span>Установить</span></p>
+            </div>
+          </div>
+      </button>
 
       <!-- Unnamed (Group) -->
       <div id="u154" class="ax_default" data-left="1052" data-top="158" data-width="61" data-height="14">
@@ -1301,7 +1315,7 @@
         <!-- Numbers_parsRefreshTime (Text Field) -->
         <div id="u155" class="ax_default text_field disabled" data-label="Numbers_parsRefreshTime">
           <div id="u155_div" class="disabled"></div>
-          <input id="u155_input" type="text" value="0" class="u155_input" disabled/>
+          <input id="u155_input" type="text" value="0" class="u155_input" name="settings_spinBox_parsRefreshTime" disabled/>
         </div>
 
         <!-- Plus_parsRefreshTime (Dynamic Panel) -->
