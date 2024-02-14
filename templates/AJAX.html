@@ -26,8 +26,8 @@
               //var dat = Object.entries(response.Success).join('\n');
               var dat = response.Success
               //alert(dat);
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
               //$('#table-cell').text(Object.entries(response.mainpage_data).join('\n'))
             },
         });
@@ -38,20 +38,20 @@
 <!-- Обработчик checkBox ВКЛЮЧЕНИЕ ТЕЛЕГРАММ БОТА -->
 <script>
     $(document).ready(function() {
-        $('#u101_input').click(function() {
-          var settings_checkBox_telegramBot = $('#u101_input[name=settings_checkBox_telegramBot]').is(':checked');
+        $('#u386_input').click(function() {
+          var settings_checkBox_tgBotOn = $('#u386_input[name=settings_checkBox_tgBotOn]').is(':checked');
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
             data: {
-                'settings_checkBox_telegramBot': settings_checkBox_telegramBot,
+                'settings_checkBox_tgBotOn': settings_checkBox_tgBotOn,
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
             },
         });
       });
@@ -61,20 +61,20 @@
 <!-- Обработчик checkBox ЦИКЛИЧЕСКОЕ ОБНОВЛЕНИЕ -->
 <script>
     $(document).ready(function() {
-        $('#u104_input').click(function() {
-          var settings_checkBox_autoRefresh = $('#u104_input[name=settings_checkBox_autoRefresh]').is(':checked');
+        $('#u389_input').click(function() {
+          var settings_checkBox_parsRefreshTime = $('#u389_input[name=settings_checkBox_parsRefreshTime]').is(':checked');
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
             data: {
-                'settings_checkBox_autoRefresh': settings_checkBox_autoRefresh,
+                'settings_checkBox_parsRefreshTime': settings_checkBox_parsRefreshTime,
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
             },
         });
       });
@@ -84,20 +84,20 @@
 <!-- Обработчик checkBox ОТОБРАЖАТЬ ВСЕ КОТИРОВКИ-->
 <script>
     $(document).ready(function() {
-        $('#u118_input').click(function() {
-          var settings_checkBox_allQuotationView = $('#u118_input[name=settings_checkBox_allQuotationView]').is(':checked');
+        $('#u403_input').click(function() {
+          var settings_checkBox_viewAllquotations = $('#u403_input[name=settings_checkBox_viewAllquotations]').is(':checked');
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
             data: {
-                'settings_checkBox_allQuotationView': settings_checkBox_allQuotationView,
+                'settings_checkBox_viewAllquotations': settings_checkBox_viewAllquotations,
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
             },
         });
       });
@@ -107,8 +107,8 @@
 <!-- Обработчик dropList КОТИРУЕМАЯ ВАЛЮТА-->
 <script>
     $(document).ready(function() {
-        $('#u109_input').change(function() {
-          var settings_droplist_quotCoin = $('#u109_input[name=settings_droplist_quotCoin]').val();
+        $('#u394_input').change(function() {
+          var settings_droplist_quotCoin = $('#u394_input[name=settings_droplist_quotCoin]').val();
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
@@ -119,8 +119,8 @@
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
             },
         });
       });
@@ -130,20 +130,20 @@
 <!-- Обработчик dropList БАЗОВАЯ ВАЛЮТА-->
 <script>
     $(document).ready(function() {
-        $('#u110_input').change(function() {
-          var settings_droplist_baseCoin = $('#u110_input[name=settings_droplist_baseCoin]').val();
+        $('#u395_input').change(function() {
+          var settings_dropList_baseCoin = $('#u395_input[name=settings_dropList_baseCoin]').val();
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
             data: {
-                'settings_droplist_baseCoin': settings_droplist_baseCoin,
+                'settings_dropList_baseCoin': settings_dropList_baseCoin,
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
             },
         });
       });
@@ -154,8 +154,8 @@
 <!-- ПОИСК -->
 <script>
     $(document).ready(function() {
-        $('#settings_quotCoinSearch-button').click(function() {
-          var settings_textInp_quotCoinSearch = $('#u112 input[name=settings_textInp_quotCoinSearch]').val();
+        $('#u399').click(function() {
+          var settings_textInp_quotCoinSearch = $('#397 input[name=settings_textInp_quotCoinSearch]').val();
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
@@ -166,8 +166,8 @@
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
             },
         });
       });
@@ -177,8 +177,8 @@
 <!-- ДОБАВИТЬ -->
 <script>
     $(document).ready(function() {
-        $('#settings_quotCoinAdd-button').click(function() {
-          var settings_textInp_quotCoinAdd = $('#u112 input[name=settings_textInp_quotCoinSearch]').val();
+        $('#u400').click(function() {
+          var settings_textInp_quotCoinAdd = $('#u397 input[name=settings_textInp_quotCoinSearch]').val();
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
@@ -189,8 +189,8 @@
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
             },
         });
       });
@@ -200,8 +200,8 @@
 <!-- УДАЛИТЬ -->
 <script>
     $(document).ready(function() {
-        $('#settings_quotCoinDelete-button').click(function() {
-          var settings_textInp_quotCoinDelete = $('#u112 input[name=settings_textInp_quotCoinSearch]').val();
+        $('#u401').click(function() {
+          var settings_textInp_quotCoinDelete = $('#u397 input[name=settings_textInp_quotCoinSearch]').val();
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
@@ -212,8 +212,8 @@
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
             },
         });
       });
@@ -223,20 +223,20 @@
 <!-- Обработчик button УСТАНОВИТЬ время обновления парсеров-->
 <script>
     $(document).ready(function() {
-        $('#settings_applyParsRefreshTime_button').click(function() {
-          var settings_spinBox_parsRefreshTime = $('#u155 input[name=settings_spinBox_parsRefreshTime]').val();
+        $('#settings_button_EnableRefreshTime').click(function() {
+          var settings_textInp_parsRefreshTime = $('#u432 input[name=settings_textInp_parsRefreshTime]').val();
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
             data: {
-                'settings_spinBox_parsRefreshTime': settings_spinBox_parsRefreshTime,
+                'settings_textInp_parsRefreshTime': settings_textInp_parsRefreshTime,
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
             },
         });
       });
@@ -249,13 +249,13 @@
 <script>
     $(document).ready(function() {
         $('#autoTradeSettings_button_placeOrder').click(function() {
-          var autoTradeSettings_dropList_exchangeType = $('#u102_input[name=autoTradeSettings_dropList_exchangeType]').val(),
-            autoTradeSettings_dropList_dealType = $('#u121_input[name=autoTradeSettings_dropList_dealType]').val(),
-            autoTradeSettings_dropList_orderType = $('#u123_input[name=autoTradeSettings_dropList_orderType]').val(),
-            autoTradeSettings_dropList_tradeQuotCoin = $('#u125_input[name=autoTradeSettings_dropList_tradeQuotCoin]').val(),
-            autoTradeSettings_dropList_tradeBaseCoin = $('#u127_input[name=autoTradeSettings_dropList_tradeBaseCoin]').val(),
-            autoTradeSettings_spinBox_buyAmount = $('#u131_input[name=autoTradeSettings_spinBox_buyAmount]').val(),
-            autoTradeSettings_spinBox_currencyPrice = $('#u140_input[name=autoTradeSettings_spinBox_currencyPrice]').val();
+          var autoTradeSettings_dropList_exchangeType = $('#u387_input[name=autoTradeSettings_dropList_exchangeType]').val(),
+            autoTradeSettings_dropList_dealType = $('#u406_input[name=autoTradeSettings_dropList_dealType]').val(),
+            autoTradeSettings_dropList_orderType = $('#u408_input[name=autoTradeSettings_dropList_orderType]').val(),
+            autoTradeSettings_dropList_tradeQuotCoin = $('#u410_input[name=autoTradeSettings_dropList_tradeQuotCoin]').val(),
+            autoTradeSettings_dropList_tradeBaseCoin = $('#u412_input[name=autoTradeSettings_dropList_tradeBaseCoin]').val(),
+            autoTradeSettings_spinBox_buyAmount = $('#u416_input[name=autoTradeSettings_spinBox_buyAmount]').val(),
+            autoTradeSettings_spinBox_currencyPrice = $('#u440_input[name=autoTradeSettings_spinBox_currencyPrice]').val();
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
@@ -272,8 +272,8 @@
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
             },
         });
       });
@@ -283,8 +283,8 @@
 <!-- Обработчик checkBox АВТОМАТИЧЕСКАЯ ТОРГОВЛЯ - ВКЛЮЧИТЬ ИМИТАЦИЮ ТОРГОВЛИ -->
 <script>
     $(document).ready(function() {
-        $('#u147_input').click(function() {
-          var autoTradeSettings_checkBox_enableImitatitonTrade = $('#u147_input[name=autoTradeSettings_checkBox_enableImitatitonTrade]').is(':checked');
+        $('#u424_input').click(function() {
+          var autoTradeSettings_checkBox_enableImitatitonTrade = $('#u424_input[name=autoTradeSettings_checkBox_enableImitatitonTrade]').is(':checked');
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
@@ -295,8 +295,8 @@
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               var dat = response.Success;
-              $('#u39_p').append('<span id="u39_s"></span>');
-              $('#u39_s').text(dat);
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
             },
         });
       });
@@ -306,10 +306,10 @@
 <!-- модальное окно APIkeys_input_window -->
 <script>
     $(document).ready(function() {
-        $('#u6').click(function() {
-          var APIkeysInputWindow_dropList_exchangeType = $('#u9 input[name=APIkeysInputWindow_dropList_exchangeType]').val(),
-              APIkeysInputWindow_textInp_apiKeyInput = $('#u2 input[name=APIkeysInputWindow_textInp_apiKeyInput]').val(),
-              APIkeysInputWindow_textInp_secretKeyInput = $('#u3 input[name=APIkeysInputWindow_textInp_secretKeyInput]').val();
+        $('#u291').click(function() {
+          var APIkeysInputWindow_dropList_exchangeType = $('#u294 input[name=APIkeysInputWindow_dropList_exchangeType]').val(),
+              APIkeysInputWindow_textInp_apiKeyInput = $('#u287 input[name=APIkeysInputWindow_textInp_apiKeyInput]').val(),
+              APIkeysInputWindow_textInp_secretKeyInput = $('#u288 input[name=APIkeysInputWindow_textInp_secretKeyInput]').val();
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
@@ -322,31 +322,23 @@
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function () {
              if (this.data.APIkeysInputWindow_textInp_apiKeyInput != '' && this.data.APIkeysInputWindow_textInp_secretKeyInput != '') {
-                $('#u102_input').prop('disabled', false);
-                document.getElementById('u102').style.opacity = "1";
-                document.getElementById('u120').style.opacity = "1";
-                $('#u121_input').prop('disabled', false);
-                document.getElementById('u121').style.opacity = "1";
-                document.getElementById('u122').style.opacity = "1";
-                $('#u123_input').prop('disabled', false);
-                document.getElementById('u123').style.opacity = "1";
-                document.getElementById('u124').style.opacity = "1";
-                $('#u125_input').prop('disabled', false);
-                document.getElementById('u125').style.opacity = "1";
-                document.getElementById('u126').style.opacity = "1";
-                $('#u127_input').prop('disabled', false);
-                document.getElementById('u127').style.opacity = "1";
-                document.getElementById('u128').style.opacity = "1";
-                $('#u131').prop('disabled', false);
-                $('#u131_div').prop('disabled', false);
-                $('#u131_input').prop('disabled', false);
-                document.getElementById('u131').style.opacity = "1";
-
-                $('#u132').setPanelState('disabled', false)
-                $('#u134').prop('disabled', false);
-                $('#u134_img').prop('disabled', false);
-                document.getElementById('u133').style.opacity = "1";
-                $('#u135').prop('disabled', false);
+                $('#u387_input').prop('disabled', false);
+                document.getElementById('u387').style.opacity = "1";
+                document.getElementById('u405').style.opacity = "1";
+                $('#u406_input').prop('disabled', false);
+                document.getElementById('u406').style.opacity = "1";
+                document.getElementById('u407').style.opacity = "1";
+                $('#u408_input').prop('disabled', false);
+                document.getElementById('u408').style.opacity = "1";
+                document.getElementById('u409').style.opacity = "1";
+                $('#u410_input').prop('disabled', false);
+                document.getElementById('u410').style.opacity = "1";
+                document.getElementById('u414').style.opacity = "1";
+                $('#u412_input').prop('disabled', false);
+                document.getElementById('u412').style.opacity = "1";
+                document.getElementById('u413').style.opacity = "1";
+                document.getElementById('u411').style.opacity = "1";
+                document.getElementById('u423').style.opacity = "1";
 
              }
             },

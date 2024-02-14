@@ -2190,13 +2190,13 @@
         <!-- Unnamed (Text Field) -->
         <div id="u287" class="ax_default text_field">
           <div id="u287_div" class=""></div>
-          <input id="u287_input" type="text" value="" class="u287_input"/>
+          <input id="u287_input" type="text" value="" class="u287_input" name="APIkeysInputWindow_textInp_apiKeyInput"/>
         </div>
 
         <!-- Unnamed (Text Field) -->
         <div id="u288" class="ax_default text_field">
           <div id="u288_div" class=""></div>
-          <input id="u288_input" type="text" value="" class="u288_input"/>
+          <input id="u288_input" type="text" value="" class="u288_input" name="APIkeysInputWindow_textInp_secretKeyInput"/>
         </div>
 
         <!-- Unnamed (Rectangle) -->
@@ -2216,7 +2216,7 @@
         </div>
 
         <!-- Unnamed (Rectangle) -->
-        <div id="u291" class="ax_default button">
+        <div id="u291" class="ax_default button" style="cursor: pointer;">
           <div id="u291_div" class=""></div>
           <div id="u291_text" class="text ">
             <p><span>Сохранить</span></p>
@@ -2242,7 +2242,7 @@
         <!-- Unnamed (Droplist) -->
         <div id="u294" class="ax_default droplist">
           <div id="u294_div" class=""></div>
-          <select id="u294_input" class="u294_input">
+          <select id="u294_input" class="u294_input" name="APIkeysInputWindow_dropList_exchangeType">
             <option class="u294_input_option" value="Huobi">Huobi</option>
             <option class="u294_input_option" value="Kucoin">Kucoin</option>
             <option class="u294_input_option" value="Myfin">Myfin</option>
@@ -2350,90 +2350,94 @@
           <p><span>Выбор площадок</span></p>
         </div>
       </div>
-
-      <!-- sitelist_item_myfin (Checkbox) -->
-      <div id="u310" class="ax_default checkbox" data-label="sitelist_item_myfin">
-        <label id="u310_input_label" for="u310_input" style="position: absolute; left: 0px;">
-          <img id="u310_img" class="img " src="{% static 'app_mainpage/images/mainwindow/sitelist_item_myfin_u310.svg' %}"/>
-          <div id="u310_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Myfin</span></p>
+      <form method="POST" action="" style="" id="sitelist_form" >
+      {% csrf_token %}
+          <!-- sitelist_item_myfin (Checkbox) -->
+          <div id="u310" class="ax_default checkbox" data-label="sitelist_item_myfin">
+            <label id="u310_input_label" for="u310_input" style="position: absolute; left: 0px;">
+              <img id="u310_img" class="img " src="{% static 'app_mainpage/images/mainwindow/sitelist_item_myfin_u310.svg' %}"/>
+              <div id="u310_text" class="text ">
+                <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Myfin</span></p>
+              </div>
+            </label>
+            <input id="u310_input" type="checkbox" value="checkbox" name="sitelist_checkBox_myfin"/>
           </div>
-        </label>
-        <input id="u310_input" type="checkbox" value="checkbox"/>
-      </div>
 
-      <!-- Unnamed (Image) -->
-      <div id="u311" class="ax_default image">
-        <img id="u311_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u311.png' %}"/>
-        <div id="u311_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- sitelist_item_kucoin (Checkbox) -->
-      <div id="u312" class="ax_default checkbox" data-label="sitelist_item_kucoin">
-        <label id="u312_input_label" for="u312_input" style="position: absolute; left: 0px;">
-          <img id="u312_img" class="img " src="{% static 'app_mainpage/images/mainwindow/sitelist_item_kucoin_u312.svg' %}"/>
-          <div id="u312_text" class="text ">
-            <p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-size:14px;">Kucoin</span></p>
+          <!-- Unnamed (Image) -->
+          <div id="u311" class="ax_default image">
+            <img id="u311_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u311.png' %}"/>
+            <div id="u311_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
           </div>
-        </label>
-        <input id="u312_input" type="checkbox" value="checkbox"/>
-      </div>
 
-      <!-- Unnamed (Image) -->
-      <div id="u313" class="ax_default image">
-        <img id="u313_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u313.png' %}"/>
-        <div id="u313_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- sitelist_item_coinbase (Checkbox) -->
-      <div id="u314" class="ax_default checkbox" data-label="sitelist_item_coinbase">
-        <label id="u314_input_label" for="u314_input" style="position: absolute; left: 0px;">
-          <img id="u314_img" class="img " src="{% static 'app_mainpage/images/mainwindow/sitelist_item_coinbase_u314.svg' %}"/>
-          <div id="u314_text" class="text ">
-            <p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-size:14px;">Coinbase</span></p>
+          <!-- sitelist_item_kucoin (Checkbox) -->
+          <div id="u312" class="ax_default checkbox" data-label="sitelist_item_kucoin">
+            <label id="u312_input_label" for="u312_input" style="position: absolute; left: 0px;">
+              <img id="u312_img" class="img " src="{% static 'app_mainpage/images/mainwindow/sitelist_item_kucoin_u312.svg' %}"/>
+              <div id="u312_text" class="text ">
+                <p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-size:14px;">Kucoin</span></p>
+              </div>
+            </label>
+            <input id="u312_input" type="checkbox" value="checkbox" name="sitelist_checkBox_kucoin"/>
           </div>
-        </label>
-        <input id="u314_input" type="checkbox" value="checkbox"/>
-      </div>
 
-      <!-- Unnamed (Image) -->
-      <div id="u315" class="ax_default image">
-        <img id="u315_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u315.png' %}"/>
-        <div id="u315_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- sitelist_item_huobi (Checkbox) -->
-      <div id="u316" class="ax_default checkbox selected" data-label="sitelist_item_huobi">
-        <label id="u316_input_label" for="u316_input" style="position: absolute; left: 0px;">
-          <img id="u316_img" class="img " src="{% static 'app_mainpage/images/mainwindow/sitelist_item_huobi_u316_selected.svg' %}"/>
-          <div id="u316_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Huobi</span></p>
+          <!-- Unnamed (Image) -->
+          <div id="u313" class="ax_default image">
+            <img id="u313_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u313.png' %}"/>
+            <div id="u313_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
           </div>
-        </label>
-        <input id="u316_input" type="checkbox" value="checkbox"/>
-      </div>
 
-      <!-- Unnamed (Image) -->
-      <div id="u317" class="ax_default image">
-        <img id="u317_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u317.png' %}"/>
-        <div id="u317_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
+          <!-- sitelist_item_coinbase (Checkbox) -->
+          <div id="u314" class="ax_default checkbox" data-label="sitelist_item_coinbase">
+            <label id="u314_input_label" for="u314_input" style="position: absolute; left: 0px;">
+              <img id="u314_img" class="img " src="{% static 'app_mainpage/images/mainwindow/sitelist_item_coinbase_u314.svg' %}"/>
+              <div id="u314_text" class="text ">
+                <p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-size:14px;">Coinbase</span></p>
+              </div>
+            </label>
+            <input id="u314_input" type="checkbox" value="checkbox" name="sitelist_checkBox_coinbase"/>
+          </div>
 
-      <!-- sitelist_button_loadSiteData (Rectangle) -->
-      <div id="u318" class="ax_default button" data-label="sitelist_button_loadSiteData">
-        <div id="u318_div" class=""></div>
-        <div id="u318_text" class="text ">
-          <p><span>Загрузить данные</span></p>
-        </div>
-      </div>
+          <!-- Unnamed (Image) -->
+          <div id="u315" class="ax_default image">
+            <img id="u315_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u315.png' %}"/>
+            <div id="u315_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- sitelist_item_huobi (Checkbox) -->
+          <div id="u316" class="ax_default checkbox selected" data-label="sitelist_item_huobi">
+            <label id="u316_input_label" for="u316_input" style="position: absolute; left: 0px;">
+              <img id="u316_img" class="img " src="{% static 'app_mainpage/images/mainwindow/sitelist_item_huobi_u316_selected.svg' %}"/>
+              <div id="u316_text" class="text ">
+                <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Huobi</span></p>
+              </div>
+            </label>
+            <input id="u316_input" type="checkbox" value="checkbox" name="sitelist_checkBox_huobi"/>
+          </div>
+
+          <!-- Unnamed (Image) -->
+          <div id="u317" class="ax_default image">
+            <img id="u317_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u317.png' %}"/>
+            <div id="u317_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- sitelist_button_loadSiteData (Rectangle) -->
+          <button id="load-button" type="submit" class="btn btn-primary" style="">
+              <div id="u318" class="ax_default button" data-label="sitelist_button_loadSiteData">
+                <div id="u318_div" class=""></div>
+                <div id="u318_text" class="text ">
+                  <p><span>Загрузить данные</span></p>
+                </div>
+              </div>
+          </button>
+      </form>
 
       <!-- mainwindow_label_currenciesInformWindow (Rectangle) -->
       <div id="u319" class="ax_default label" data-label="mainwindow_label_currenciesInformWindow">
@@ -2971,13 +2975,13 @@
             <p><span>Включение телеграмм-бота</span></p>
           </div>
         </label>
-        <input id="u386_input" type="checkbox" value="checkbox"/>
+        <input id="u386_input" type="checkbox" value="checkbox" name="settings_checkBox_tgBotOn"/>
       </div>
 
       <!-- autoTradeSettings_dropList_exchangeType (Droplist) -->
       <div id="u387" class="ax_default droplist disabled" data-label="autoTradeSettings_dropList_exchangeType">
         <div id="u387_div" class="disabled"></div>
-        <select id="u387_input" class="u387_input" disabled>
+        <select id="u387_input" class="u387_input" name="autoTradeSettings_dropList_exchangeType" disabled>
           <option class="u387_input_option" value="Huobi">Huobi</option>
           <option class="u387_input_option" value="Kucoin">Kucoin</option>
         </select>
@@ -2996,7 +3000,7 @@
                   <p><span>Циклическое обновление</span></p>
                 </div>
               </label>
-              <input id="u389_input" type="checkbox" value="checkbox"/>
+              <input id="u389_input" type="checkbox" value="checkbox" name="settings_checkBox_parsRefreshTime"/>
             </div>
           </div>
         </div>
@@ -3044,7 +3048,7 @@
       <!-- settings_droplist_quotCoin (Droplist) -->
       <div id="u394" class="ax_default droplist" data-label="settings_droplist_quotCoin">
         <div id="u394_div" class=""></div>
-        <select id="u394_input" class="u394_input">
+        <select id="u394_input" class="u394_input" name="settings_droplist_quotCoin">
           <option class="u394_input_option" value="XRP">XRP</option>
           <option class="u394_input_option" value="BTC">BTC</option>
         </select>
@@ -3053,7 +3057,7 @@
       <!-- settings_dropList_baseCoin (Droplist) -->
       <div id="u395" class="ax_default droplist" data-label="settings_dropList_baseCoin">
         <div id="u395_div" class=""></div>
-        <select id="u395_input" class="u395_input">
+        <select id="u395_input" class="u395_input" name="settings_dropList_baseCoin">
           <option class="u395_input_option" value="RUB">RUB</option>
           <option class="u395_input_option" value="USD">USD</option>
         </select>
@@ -3070,7 +3074,7 @@
       <!-- settings_textInp_quotCoinSearch (Text Field) -->
       <div id="u397" class="ax_default text_field" data-label="settings_textInp_quotCoinSearch">
         <div id="u397_div" class=""></div>
-        <input id="u397_input" type="text" value="" class="u397_input"/>
+        <input id="u397_input" type="text" value="" class="u397_input" name="settings_textInp_quotCoinSearch"/>
       </div>
 
       <!-- settings_label_quotCoinSearch (Rectangle) -->
@@ -3113,15 +3117,15 @@
         </div>
       </div>
 
-      <!-- checkBox_viewAllquotations (Checkbox) -->
-      <div id="u403" class="ax_default checkbox" data-label="checkBox_viewAllquotations">
+      <!-- settings_checkBox_viewAllquotations (Checkbox) -->
+      <div id="u403" class="ax_default checkbox" data-label="settings_checkBox_viewAllquotations">
         <label id="u403_input_label" for="u403_input" style="position: absolute; left: 0px;">
           <img id="u403_img" class="img " src="{% static 'app_mainpage/images/mainwindow/checkbox_viewallquotations_u403.svg' %}"/>
           <div id="u403_text" class="text ">
             <p><span>Отображать все котировки</span></p>
           </div>
         </label>
-        <input id="u403_input" type="checkbox" value="checkbox"/>
+        <input id="u403_input" type="checkbox" value="checkbox" name="settings_checkBox_viewAllquotations"/>
       </div>
 
       <!-- autoTradeSettings_label_tradeSettings (Rectangle) -->
@@ -3143,7 +3147,7 @@
       <!-- autoTradeSettings_dropList_dealType (Droplist) -->
       <div id="u406" class="ax_default droplist disabled" data-label="autoTradeSettings_dropList_dealType">
         <div id="u406_div" class="disabled"></div>
-        <select id="u406_input" class="u406_input" disabled>
+        <select id="u406_input" class="u406_input" name="autoTradeSettings_dropList_dealType" disabled>
           <option class="u406_input_option" value="Покупка">Покупка</option>
           <option class="u406_input_option" value="Продажа">Продажа</option>
         </select>
@@ -3160,7 +3164,7 @@
       <!-- autoTradeSettings_dropList_orderType (Droplist) -->
       <div id="u408" class="ax_default droplist disabled" data-label="autoTradeSettings_dropList_orderType">
         <div id="u408_div" class="disabled"></div>
-        <select id="u408_input" class="u408_input" disabled>
+        <select id="u408_input" class="u408_input" name="autoTradeSettings_dropList_orderType" disabled>
           <option class="u408_input_option" value="Лимитный">Лимитный</option>
           <option class="u408_input_option" value="Рыночный">Рыночный</option>
         </select>
@@ -3177,7 +3181,7 @@
       <!-- autoTradeSettings_dropList_tradeQuotCoin (Droplist) -->
       <div id="u410" class="ax_default droplist disabled" data-label="autoTradeSettings_dropList_tradeQuotCoin">
         <div id="u410_div" class="disabled"></div>
-        <select id="u410_input" class="u410_input" disabled>
+        <select id="u410_input" class="u410_input" name="autoTradeSettings_dropList_tradeQuotCoin" disabled>
           <option class="u410_input_option" value="XRP">XRP</option>
           <option class="u410_input_option" value="BTC">BTC</option>
         </select>
@@ -3194,7 +3198,7 @@
       <!-- autoTradeSettings_dropList_tradeBaseCoin (Droplist) -->
       <div id="u412" class="ax_default droplist disabled" data-label="autoTradeSettings_dropList_tradeBaseCoin">
         <div id="u412_div" class="disabled"></div>
-        <select id="u412_input" class="u412_input" disabled>
+        <select id="u412_input" class="u412_input" name="autoTradeSettings_dropList_tradeBaseCoin" disabled>
           <option class="u412_input_option" value="USDT">USDT</option>
           <option class="u412_input_option" value="USD">USD</option>
           <option class="u412_input_option" value="RUB">RUB</option>
@@ -3223,7 +3227,7 @@
         <!-- Numbers (Text Field) -->
         <div id="u416" class="ax_default text_field" data-label="Numbers">
           <div id="u416_div" class=""></div>
-          <input id="u416_input" type="text" value="0" class="u416_input"/>
+          <input id="u416_input" type="text" value="0" class="u416_input" name="autoTradeSettings_spinBox_buyAmount" />
         </div>
 
         <!-- Plus (Dynamic Panel) -->
@@ -3299,7 +3303,7 @@
             <p><span>Включить имитацию торговли</span></p>
           </div>
         </label>
-        <input id="u424_input" type="checkbox" value="checkbox"/>
+        <input id="u424_input" type="checkbox" value="checkbox" name="autoTradeSettings_checkBox_enableImitatitonTrade"/>
       </div>
 
       <!-- autoTradeSettings_button_cryptoBotStart (Rectangle) -->
@@ -3319,20 +3323,24 @@
       </div>
 
       <!-- autoTradeSettings_button_placeOrder (Rectangle) -->
-      <div id="u427" class="ax_default button disabled" data-label="autoTradeSettings_button_placeOrder">
-        <div id="u427_div" class="disabled"></div>
-        <div id="u427_text" class="text ">
-          <p><span>Разместить ордер</span></p>
-        </div>
-      </div>
+      <button id="autoTradeSettings_button_placeOrder" type="submit" class="btn btn-primary" style="">
+          <div id="u427" class="ax_default button disabled" data-label="autoTradeSettings_button_placeOrder">
+            <div id="u427_div" class="disabled"></div>
+            <div id="u427_text" class="text ">
+              <p><span>Разместить ордер</span></p>
+            </div>
+          </div>
+      </button>
 
       <!-- autoTradeSettings_button_cancelOrder (Rectangle) -->
-      <div id="u428" class="ax_default button" data-label="autoTradeSettings_button_cancelOrder">
-        <div id="u428_div" class=""></div>
-        <div id="u428_text" class="text ">
-          <p><span>Отменить ордер</span></p>
-        </div>
-      </div>
+      <button id="autoTradeSettings_button_cancelOrder" type="submit" class="btn btn-primary" style="">
+          <div id="u428" class="ax_default button" data-label="autoTradeSettings_button_cancelOrder">
+            <div id="u428_div" class=""></div>
+            <div id="u428_text" class="text ">
+              <p><span>Отменить ордер</span></p>
+            </div>
+          </div>
+      </button>
 
       <!-- autoTradeSettings_button_getOpenOrdersInfo (Shape) -->
       <div id="u429" class="ax_default button" data-label="autoTradeSettings_button_getOpenOrdersInfo">
@@ -3343,12 +3351,14 @@
       </div>
 
       <!-- settings_button_EnableRefreshTime (Rectangle) -->
-      <div id="u430" class="ax_default button" data-label="settings_button_EnableRefreshTime">
-        <div id="u430_div" class=""></div>
-        <div id="u430_text" class="text ">
-          <p><span>Установить</span></p>
-        </div>
-      </div>
+      <button id="settings_button_EnableRefreshTime" type="submit" class="btn btn-primary" style="">
+          <div id="u430" class="ax_default button" data-label="settings_button_EnableRefreshTime">
+            <div id="u430_div" class=""></div>
+            <div id="u430_text" class="text ">
+              <p><span>Установить</span></p>
+            </div>
+          </div>
+      </button>
 
       <!-- settings_group_parsRefreshTime (Group) -->
       <div id="u431" class="ax_default" data-label="settings_group_parsRefreshTime" data-left="1052" data-top="158" data-width="61" data-height="14">
@@ -3356,7 +3366,7 @@
         <!-- Numbers_parsRefreshTime (Text Field) -->
         <div id="u432" class="ax_default text_field disabled" data-label="Numbers_parsRefreshTime">
           <div id="u432_div" class="disabled"></div>
-          <input id="u432_input" type="text" value="0" class="u432_input" disabled/>
+          <input id="u432_input" type="text" value="0" class="u432_input" name="settings_textInp_parsRefreshTime" disabled/>
         </div>
 
         <!-- Plus_parsRefreshTime (Dynamic Panel) -->
@@ -3422,7 +3432,7 @@
         <!-- Numbers (Text Field) -->
         <div id="u440" class="ax_default text_field" data-label="Numbers">
           <div id="u440_div" class=""></div>
-          <input id="u440_input" type="text" value="0" class="u440_input"/>
+          <input id="u440_input" type="text" value="0" class="u440_input" name="autoTradeSettings_spinBox_currencyPrice"/>
         </div>
 
         <!-- Plus (Dynamic Panel) -->
