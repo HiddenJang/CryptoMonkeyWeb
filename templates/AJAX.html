@@ -320,10 +320,34 @@
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
-            success: function (response) {
+            success: function () {
              if (this.data.APIkeysInputWindow_textInp_apiKeyInput != '' && this.data.APIkeysInputWindow_textInp_secretKeyInput != '') {
                 $('#u102_input').prop('disabled', false);
-                document.getElementById('u102').style.opacity = "0.9"
+                document.getElementById('u102').style.opacity = "1";
+                document.getElementById('u120').style.opacity = "1";
+                $('#u121_input').prop('disabled', false);
+                document.getElementById('u121').style.opacity = "1";
+                document.getElementById('u122').style.opacity = "1";
+                $('#u123_input').prop('disabled', false);
+                document.getElementById('u123').style.opacity = "1";
+                document.getElementById('u124').style.opacity = "1";
+                $('#u125_input').prop('disabled', false);
+                document.getElementById('u125').style.opacity = "1";
+                document.getElementById('u126').style.opacity = "1";
+                $('#u127_input').prop('disabled', false);
+                document.getElementById('u127').style.opacity = "1";
+                document.getElementById('u128').style.opacity = "1";
+                $('#u131').prop('disabled', false);
+                $('#u131_div').prop('disabled', false);
+                $('#u131_input').prop('disabled', false);
+                document.getElementById('u131').style.opacity = "1";
+
+                $('#u132').setPanelState('disabled', false)
+                $('#u134').prop('disabled', false);
+                $('#u134_img').prop('disabled', false);
+                document.getElementById('u133').style.opacity = "1";
+                $('#u135').prop('disabled', false);
+
              }
             },
         });
