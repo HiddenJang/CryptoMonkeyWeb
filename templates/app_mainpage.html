@@ -2477,8 +2477,8 @@
         <!-- Unnamed (Table Cell) -->
         <div id="u324" class="ax_default table_cell">
           <img id="u324_img" class="img " src="{% static 'app_mainpage/images/mainwindow/u324.png' %}"/>
-          <div id="u324_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
+          <div id="u324_t" class="text ">
+            <p id="u324_p"></p>
           </div>
         </div>
 
@@ -2987,8 +2987,8 @@
         </select>
       </div>
 
-      <!-- settings_checkBox_parsRefreshTime (Dynamic Panel) -->
-      <div id="u388" class="ax_default" data-label="settings_checkBox_parsRefreshTime">
+      <!-- settings_checkBox_autoRefresh (Dynamic Panel) -->
+      <div id="u388" class="ax_default" data-label="settings_checkBox_autoRefresh">
         <div id="u388_state0" class="panel_state" data-label="Disabled" style="">
           <div id="u388_state0_content" class="panel_state_content">
 
@@ -3000,7 +3000,7 @@
                   <p><span>Циклическое обновление</span></p>
                 </div>
               </label>
-              <input id="u389_input" type="checkbox" value="checkbox" name="settings_checkBox_parsRefreshTime"/>
+              <input id="u389_input" type="checkbox" value="checkbox" name="settings_checkBox_autoRefresh"/>
             </div>
           </div>
         </div>
@@ -3343,12 +3343,14 @@
       </button>
 
       <!-- autoTradeSettings_button_getOpenOrdersInfo (Shape) -->
-      <div id="u429" class="ax_default button" data-label="autoTradeSettings_button_getOpenOrdersInfo">
-        <img id="u429_img" class="img " src="{% static 'app_mainpage/images/mainwindow/autotradesettings_button_getopenordersinfo_u429.svg' %}"/>
-        <div id="u429_text" class="text ">
-          <p><span>Загрузить историю ордеров</span></p>
-        </div>
-      </div>
+      <button id="autoTradeSettings_button_getOpenOrdersInfo" type="submit" class="btn btn-primary" style="">
+          <div id="u429" class="ax_default button" data-label="autoTradeSettings_button_getOpenOrdersInfo">
+            <img id="u429_img" class="img " src="{% static 'app_mainpage/images/mainwindow/autotradesettings_button_getopenordersinfo_u429.svg' %}"/>
+            <div id="u429_text" class="text ">
+              <p><span>Загрузить историю ордеров</span></p>
+            </div>
+          </div>
+      </button>
 
       <!-- settings_button_EnableRefreshTime (Rectangle) -->
       <button id="settings_button_EnableRefreshTime" type="submit" class="btn btn-primary" style="">

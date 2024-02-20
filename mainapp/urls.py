@@ -2,7 +2,7 @@ from django.urls import path, include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import MainpageStates_api, ApikeysInput_api
+from .views import ApikeysInput_api, QuotCoinInfo_api
 
 from rest_framework import routers
 
@@ -23,7 +23,8 @@ urlpatterns = [
     path('app_mainpage', views.app_mainpage, name='app_mainpage'),
     path('app_mainpage/', views.app_mainpage, name='app_mainpage'),
     #path('', include(router.urls)),
-    path('api/v1/states/', MainpageStates_api.as_view()),
+    path('api/v1/states/', views.add_mainpage_widgets_states_api),
+    path('api/v1/get_quot_info/', QuotCoinInfo_api.as_view()),
     path('api_keys_input/', ApikeysInput_api.as_view())
 ]
 

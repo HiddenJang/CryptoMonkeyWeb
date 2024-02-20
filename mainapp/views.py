@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db import utils
@@ -8,16 +8,28 @@ from django.middleware.csrf import get_token
 from django.template.loader import render_to_string
 
 from rest_framework.views import APIView
+from django.views import View
 from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import async_only_middleware
 from rest_framework.response import Response
+
+from asgiref.sync import async_to_sync
 
 from .models import App_mainpage_states
 from .serializers import MainpageStatesSerializer
 
 from rest_framework.renderers import JSONRenderer
-import json
+
+import logging
+import asyncio
+
+
+from .services.quote_info_service import QuoteInfo
+
+logger = logging.getLogger('CryptoMonkeyWeb.views')
+
 # Create your views here.
 
 def login_page(request):
@@ -68,32 +80,56 @@ def registration_page(request):
         return render(request, 'registration_page.html')
 
 def app_mainpage(request):
-    try:
-        if request.method == 'GET':
-            if request.user.is_authenticated:
-                context = {}
-                csrf_token = get_token(request)
-                context['csrf_token'] = csrf_token
-                return render(request, 'app_mainpage.html', context)
-            else:
-                context = {'text': 'Необходимо авторизоваться перед входом!'}
-                return render(request, 'login_page.html', context)
-        elif request.method == 'POST':
-            print(f'Нажата кнопка ЗАГРУЗИТЬ ДАННЫЕ!')
-            mainpage_data = dict(request.POST)
-            mainpage_data.pop('csrfmiddlewaretoken')
-            for data in mainpage_data:
-                elementsState = App_mainpage_states()
-                elementsState.elementName = data
-                elementsState.elementValue = mainpage_data[data][0]
-                elementsState.save()
-            return redirect(app_mainpage)
+
+    if request.method == 'GET':
+        if request.user.is_authenticated:
+            context = {}
+            csrf_token = get_token(request)
+            context['csrf_token'] = csrf_token
+            return render(request, 'app_mainpage.html', context)
         else:
-            raise Exception
-    except Exception as ex:
-        print(f'mainpage except {ex}')
-        context = {'text': 'Ошибка входа! Попробуйте авторизоваться повторно!'}
-        return render(request, 'login_page.html', context)
+            context = {'text': 'Необходимо авторизоваться перед входом!'}
+            #return redirect(reverse(login_page, kwargs=context))
+            return redirect(login_page)
+    else:
+        return redirect(app_mainpage)
+
+
+#_____________API______________#
+
+@api_view(['POST'])
+def add_mainpage_widgets_states_api(request):
+    """Контроллер добавления/изменения состояний элементов (виджетов) главного окна"""
+
+    App_mainpage_states.add_widgets_states(request)
+    return JsonResponse({"Success": "true"}, status=200)
+
+class QuotCoinInfo_api(View):
+    """Контроллер получения данных по котировкам криптовалют с выбранных криптобирж"""
+
+    async def post(self, request):
+        mainpage_settings = dict(request.POST)
+        mainpage_settings.pop('csrfmiddlewaretoken', 'key not found')
+
+        async def func():
+            pars_data = await QuoteInfo().get_coins_data(mainpage_settings)
+            print(pars_data[0]["data"]["currency"])
+            return JsonResponse(pars_data[0], status=200)
+
+        while True:
+            await func()
+            await asyncio.sleep(3)
+        return JsonResponse({"Stoped": "true"}, status=200)
+
+
+class ApikeysInput_api(APIView):
+
+    def get(self, request):
+        context = {}
+        csrf_token = get_token(request)
+        context['csrf_token'] = csrf_token
+        return JsonResponse({"Html": render_to_string("login_page.html", context)})
+
 
 # @api_view(['POST'])
 # @csrf_exempt
@@ -105,35 +141,6 @@ def app_mainpage(request):
 #     else:
 #         print('редирект на mainpage')
 #         return redirect(app_mainpage)
-
-#_____________API______________#
-
-class MainpageStates_api(APIView):
-
-    def post(self, request):
-        mainpage_data = dict(request.POST)
-        print(mainpage_data)
-        mainpage_data.pop('csrfmiddlewaretoken', 'key not found')
-        for data in mainpage_data:
-            if App_mainpage_states.objects.filter(elementName=data).exists():
-                elementsState = App_mainpage_states.objects.filter(elementName=data).first()
-                elementsState.elementValue = mainpage_data[data][0]
-                print('Row updated')
-            else:
-                elementsState = App_mainpage_states()
-                elementsState.elementName = data
-                elementsState.elementValue = mainpage_data[data][0]
-                print('Row created')
-            elementsState.save()
-        return JsonResponse({"Success": "true"}, status=200)
-
-class ApikeysInput_api(APIView):
-
-    def get(self, request):
-        context = {}
-        csrf_token = get_token(request)
-        context['csrf_token'] = csrf_token
-        return JsonResponse({"Html": render_to_string("login_page.html", context)})
 
 
 # class PostRequest_api(viewsets.ModelViewSet):

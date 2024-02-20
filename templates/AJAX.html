@@ -9,22 +9,30 @@
           sitelist_checkBox_myfin = $('#sitelist_form input[name=sitelist_checkBox_myfin]').is(':checked'),
           sitelist_checkBox_kucoin = $('#sitelist_form input[name=sitelist_checkBox_kucoin]').is(':checked'),
           sitelist_checkBox_coinbase = $('#sitelist_form input[name=sitelist_checkBox_coinbase]').is(':checked'),
-          sitelist_checkBox_huobi = $('#sitelist_form input[name=sitelist_checkBox_huobi]').is(':checked');
+          sitelist_checkBox_huobi = $('#sitelist_form input[name=sitelist_checkBox_huobi]').is(':checked'),
+          settings_checkBox_autoRefresh = $('#u389_input[name=settings_checkBox_autoRefresh]').is(':checked'),
+          settings_droplist_quotCoin = $('#u394_input[name=settings_droplist_quotCoin]').val(),
+          settings_dropList_baseCoin = $('#u395_input[name=settings_dropList_baseCoin]').val(),
+          settings_textInp_parsRefreshTime = $('#u432 input[name=settings_textInp_parsRefreshTime]').val();
           $.ajax({
             type: 'POST',
-            url: '/api/v1/states/',
+            url: '/api/v1/get_quot_info/',
             //data:  $('#sitelist_form').serialize(),
             data: {
                 'sitelist_checkBox_myfin': sitelist_checkBox_myfin,
                 'sitelist_checkBox_kucoin': sitelist_checkBox_kucoin,
                 'sitelist_checkBox_coinbase': sitelist_checkBox_coinbase,
                 'sitelist_checkBox_huobi': sitelist_checkBox_huobi,
+                'settings_checkBox_autoRefresh': settings_checkBox_autoRefresh,
+                'settings_droplist_quotCoin': settings_droplist_quotCoin,
+                'settings_dropList_baseCoin': settings_dropList_baseCoin,
+                'settings_textInp_parsRefreshTime': settings_textInp_parsRefreshTime,
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
               //var dat = Object.entries(response.Success).join('\n');
-              var dat = response.Success
+              var dat = response.data.currency;
               //alert(dat);
               $('#u324_p').append('<span id="u324_s"></span>');
               $('#u324_s').text(dat);
@@ -62,12 +70,12 @@
 <script>
     $(document).ready(function() {
         $('#u389_input').click(function() {
-          var settings_checkBox_parsRefreshTime = $('#u389_input[name=settings_checkBox_parsRefreshTime]').is(':checked');
+          var settings_checkBox_autoRefresh = $('#u389_input[name=settings_checkBox_autoRefresh]').is(':checked');
           $.ajax({
             type: 'POST',
             url: '/api/v1/states/',
             data: {
-                'settings_checkBox_parsRefreshTime': settings_checkBox_parsRefreshTime,
+                'settings_checkBox_autoRefresh': settings_checkBox_autoRefresh,
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
@@ -267,6 +275,52 @@
                 'autoTradeSettings_dropList_tradeBaseCoin': autoTradeSettings_dropList_tradeBaseCoin,
                 'autoTradeSettings_spinBox_buyAmount': autoTradeSettings_spinBox_buyAmount,
                 'autoTradeSettings_spinBox_currencyPrice': autoTradeSettings_spinBox_currencyPrice,
+        },
+            dataType: "json",
+            headers: {'X-CSRFToken': "{{ csrf_token }}"},
+            success: function (response) {
+              var dat = response.Success;
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
+            },
+        });
+      });
+    });
+</script>
+
+<!-- Обработчик button АВТОМАТИЧЕСКАЯ ТОРГОВЛЯ - ЗАГРУЗИТЬ ИСТОРИЮ ОРДЕРОВ -->
+<script>
+    $(document).ready(function() {
+        $('#autoTradeSettings_button_getOpenOrdersInfo').click(function() {
+          var autoTradeSettings_dropList_exchangeType = $('#u387_input[name=autoTradeSettings_dropList_exchangeType]').val();
+          $.ajax({
+            type: 'POST',
+            url: '/api/v1/states/',
+            data: {
+                'autoTradeSettings_dropList_exchangeType': autoTradeSettings_dropList_exchangeType,
+        },
+            dataType: "json",
+            headers: {'X-CSRFToken': "{{ csrf_token }}"},
+            success: function (response) {
+              var dat = response.Success;
+              $('#u324_p').append('<span id="u324_s"></span>');
+              $('#u324_s').text(dat);
+            },
+        });
+      });
+    });
+</script>
+
+<!-- Обработчик button АВТОМАТИЧЕСКАЯ ТОРГОВЛЯ - ОТМЕНИТЬ ОРДЕР -->
+<script>
+    $(document).ready(function() {
+        $('#autoTradeSettings_button_cancelOrder').click(function() {
+          var mainwindow_order = $('#u387_input[name=autoTradeSettings_dropList_exchangeType]').val();
+          $.ajax({
+            type: 'POST',
+            url: '/api/v1/states/',
+            data: {
+                'autoTradeSettings_dropList_exchangeType': autoTradeSettings_dropList_exchangeType,
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},

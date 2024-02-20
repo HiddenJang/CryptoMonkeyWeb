@@ -1,0 +1,582 @@
+2024-02-20 14:14:04,597 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 14:14:18,136 -- CryptoMonkeyWeb.views -- 77 -- DEBUG -- test msg
+2024-02-20 14:14:38,506 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 14:14:39,961 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 14:17:17,322 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 14:17:18,828 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 14:19:33,088 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 14:19:34,750 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 14:23:15,926 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 14:23:18,113 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 14:51:19,819 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 14:56:09,908 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 14:56:17,232 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 14:56:17,261 -- CryptoMonkeyWeb.quote_info_service -- 120 -- ERROR -- You cannot call this from an async context - use a thread or sync_to_async.
+2024-02-20 14:59:25,913 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 14:59:27,581 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:01:20,295 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 15:01:22,538 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:02:21,784 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:02:42,559 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 15:02:42,563 -- CryptoMonkeyWeb.quote_info_service -- 120 -- ERROR -- You cannot call this from an async context - use a thread or sync_to_async.
+2024-02-20 15:03:36,945 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 15:03:38,768 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:05:56,908 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:06:02,632 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 15:06:02,636 -- CryptoMonkeyWeb.quote_info_service -- 114 -- ERROR -- You cannot call this from an async context - use a thread or sync_to_async.
+2024-02-20 15:06:02,636 -- CryptoMonkeyWeb.quote_info_service -- 124 -- ERROR -- '<=' not supported between instances of 'QuerySet' and 'int'
+2024-02-20 15:34:46,659 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:34:53,007 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 15:34:53,009 -- CryptoMonkeyWeb.quote_info_service -- 124 -- ERROR -- '<=' not supported between instances of 'QuerySet' and 'int'
+2024-02-20 15:35:57,417 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:36:02,764 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 15:36:02,767 -- CryptoMonkeyWeb.quote_info_service -- 124 -- ERROR -- You cannot call this from an async context - use a thread or sync_to_async.
+2024-02-20 15:36:47,209 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:36:55,639 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 15:36:56,126 -- CryptoMonkeyWeb.quote_info_service -- 124 -- ERROR -- '<=' not supported between instances of 'QuerySet' and 'int'
+2024-02-20 15:39:10,872 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:39:58,410 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:40:04,951 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 15:40:04,953 -- CryptoMonkeyWeb.quote_info_service -- 120 -- ERROR -- '<=' not supported between instances of 'QuerySet' and 'int'
+2024-02-20 15:42:32,330 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:42:38,591 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 15:42:38,592 -- CryptoMonkeyWeb.quote_info_service -- 120 -- ERROR -- '<=' not supported between instances of 'QuerySet' and 'int'
+2024-02-20 15:45:48,457 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:45:54,111 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 15:45:54,113 -- CryptoMonkeyWeb.quote_info_service -- 120 -- ERROR -- '<=' not supported between instances of 'App_mainpage_states' and 'int'
+2024-02-20 15:46:21,689 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 15:46:23,468 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:49:42,467 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 15:49:43,961 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:50:51,461 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 15:50:53,094 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:51:30,354 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:51:35,231 -- CryptoMonkeyWeb.quote_info_service -- 127 -- INFO -- sitelist_checkBox_huobi
+2024-02-20 15:51:35,232 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 15:51:35,233 -- CryptoMonkeyWeb.quote_info_service -- 120 -- ERROR -- '<=' not supported between instances of 'QuerySet' and 'int'
+2024-02-20 15:53:25,385 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:53:31,167 -- django.request -- 241 -- ERROR -- Internal Server Error: /api/v1/states/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py", line 132, in post
+    coins_info = QuoteInfo().starter()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py", line 123, in starter
+    exchanges = App_mainpage_states.objects.get(Q(elementName__contains='sitelist_checkBox') & Q(elementValue='true')).elementName
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+mainapp.models.App_mainpage_states.MultipleObjectsReturned: get() returned more than one App_mainpage_states -- it returned 2!
+2024-02-20 15:54:41,723 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:54:48,529 -- django.request -- 241 -- ERROR -- Internal Server Error: /api/v1/states/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py", line 132, in post
+    coins_info = QuoteInfo().starter()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py", line 123, in starter
+    exchanges = dict(App_mainpage_states.objects.filter(Q(elementName__contains='sitelist_checkBox') & Q(elementValue='true')))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot convert dictionary update sequence element #0 to a sequence
+2024-02-20 15:55:37,889 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 15:55:46,917 -- django.request -- 241 -- ERROR -- Internal Server Error: /api/v1/states/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py", line 132, in post
+    coins_info = QuoteInfo().starter()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py", line 123, in starter
+    exchanges = App_mainpage_states.objects.get(Q(elementName__contains='sitelist_checkBox') & Q(elementValue='true'))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+mainapp.models.App_mainpage_states.MultipleObjectsReturned: get() returned more than one App_mainpage_states -- it returned 2!
+2024-02-20 15:56:11,788 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 15:56:13,353 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:00:57,277 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:01:11,057 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:01:17,312 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 16:01:48,163 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:01:54,596 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 16:02:12,748 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:03:40,082 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:04:38,135 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:05:15,675 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:05:21,586 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 16:05:57,462 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:06:05,625 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 16:07:50,422 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:07:56,434 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 16:15:53,896 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 16:15:57,553 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:18:05,262 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 16:18:06,629 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 16:52:15,812 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 16:52:18,917 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 17:22:27,733 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\models.py changed, reloading.
+2024-02-20 17:22:30,498 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 17:26:45,227 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 17:26:46,620 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 17:28:14,037 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 17:28:15,506 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 17:29:10,863 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 17:29:13,053 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 17:43:50,525 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 17:56:49,561 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 17:56:55,124 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 17:56:55,148 -- CryptoMonkeyWeb.quote_info_service -- 116 -- ERROR -- You cannot call this from an async context - use a thread or sync_to_async.
+2024-02-20 18:04:59,742 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 18:05:05,226 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 18:05:05,228 -- CryptoMonkeyWeb.quote_info_service -- 116 -- ERROR -- You cannot call this from an async context - use a thread or sync_to_async.
+2024-02-20 18:10:08,375 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 18:10:15,982 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 19:32:53,361 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 19:32:55,906 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:33:24,058 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 19:33:25,781 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:34:20,708 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 19:34:22,285 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:34:32,515 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 19:34:34,213 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:35:05,206 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 19:35:06,989 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:35:37,926 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 19:35:40,148 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:36:00,695 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 19:36:02,609 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:36:55,306 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 19:36:56,754 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:37:35,889 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 19:37:37,475 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:37:52,312 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 19:37:54,380 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:38:17,584 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:38:27,510 -- django.request -- 241 -- ERROR -- Internal Server Error: /api/v1/get_quot_info/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'coroutine'>`
+2024-02-20 19:40:36,719 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:40:43,100 -- django.request -- 241 -- ERROR -- Internal Server Error: /api/v1/get_quot_info/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'coroutine'>`
+2024-02-20 19:47:48,316 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 19:47:50,023 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:48:59,334 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 19:49:00,742 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:49:25,793 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 19:49:27,461 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:51:37,005 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:51:43,587 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 19:51:43,595 -- CryptoMonkeyWeb.quote_info_service -- 105 -- ERROR -- 'list' object has no attribute 'upper'
+2024-02-20 19:52:15,887 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:52:20,073 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 19:52:20,076 -- CryptoMonkeyWeb.quote_info_service -- 106 -- ERROR -- 'list' object has no attribute 'upper'
+2024-02-20 19:52:54,071 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 19:53:26,010 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:22:24,840 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:22:38,335 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:22:38,766 -- django.request -- 241 -- ERROR -- Internal Server Error: /api/v1/get_quot_info/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 277, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 353, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\request.py", line 227, in user
+    self._authenticate()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\authentication.py", line 127, in authenticate
+    if not user or not user.is_active:
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\asyncio.py", line 24, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+2024-02-20 20:24:49,273 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:24:57,661 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:24:57,783 -- django.request -- 241 -- ERROR -- Internal Server Error: /api/v1/get_quot_info/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 277, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 353, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\request.py", line 227, in user
+    self._authenticate()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\authentication.py", line 127, in authenticate
+    if not user or not user.is_active:
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\asyncio.py", line 24, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+2024-02-20 20:25:14,176 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:25:59,654 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:26:07,303 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:26:30,485 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:27:35,322 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:27:45,171 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:28:58,708 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:29:02,642 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:38:58,845 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:39:07,563 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:41:36,006 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-20 20:41:37,616 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:45:39,698 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 20:45:46,849 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:45:53,328 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:46:10,733 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:46:17,818 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:47:30,159 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:49:01,732 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:49:10,954 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:49:13,671 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:49:34,183 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:49:39,653 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:50:02,186 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:50:20,578 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:50:21,433 -- django.request -- 241 -- ERROR -- Internal Server Error: /api/v1/get_quot_info/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 277, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 353, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py", line 116, in post
+    item += {"data": "true"}
+TypeError: unsupported operand type(s) for +=: 'dict' and 'dict'
+2024-02-20 20:51:16,103 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:51:21,944 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:52:04,125 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:52:52,821 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:52:55,699 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:53:06,858 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:53:12,556 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 20:54:53,099 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 20:55:01,879 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 21:01:00,451 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 21:01:07,051 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 21:01:16,900 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 21:01:17,906 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 21:02:32,883 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 21:02:40,242 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 21:03:35,520 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 21:03:35,522 -- django.request -- 146 -- WARNING -- Method Not Allowed (GET): /api/v1/get_quot_info/
+2024-02-20 21:03:35,524 -- django.request -- 241 -- WARNING -- Method Not Allowed: /api/v1/get_quot_info/
+2024-02-20 21:03:53,337 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 21:03:53,339 -- django.request -- 146 -- WARNING -- Method Not Allowed (GET): /api/v1/get_quot_info/
+2024-02-20 21:03:53,341 -- django.request -- 241 -- WARNING -- Method Not Allowed: /api/v1/get_quot_info/
+2024-02-20 21:05:10,857 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 21:05:21,464 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 21:05:21,577 -- django.request -- 241 -- ERROR -- Internal Server Error: /api/v1/get_quot_info/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 277, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 353, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py", line 120, in post
+    await func()
+          ^^^^^^
+TypeError: QuotCoinInfo_api.post.<locals>.func() missing 1 required positional argument: 'request'
+2024-02-20 21:05:39,229 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-20 21:05:45,183 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-20 21:06:56,112 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
+2024-02-20 21:06:57,614 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
