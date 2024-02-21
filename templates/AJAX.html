@@ -11,9 +11,10 @@
           sitelist_checkBox_coinbase = $('#sitelist_form input[name=sitelist_checkBox_coinbase]').is(':checked'),
           sitelist_checkBox_huobi = $('#sitelist_form input[name=sitelist_checkBox_huobi]').is(':checked'),
           settings_checkBox_autoRefresh = $('#u389_input[name=settings_checkBox_autoRefresh]').is(':checked'),
-          settings_droplist_quotCoin = $('#u394_input[name=settings_droplist_quotCoin]').val(),
+          settings_dropList_quotCoin = $('#u394_input[name=settings_dropList_quotCoin]').val(),
           settings_dropList_baseCoin = $('#u395_input[name=settings_dropList_baseCoin]').val(),
-          settings_textInp_parsRefreshTime = $('#u432 input[name=settings_textInp_parsRefreshTime]').val();
+          settings_textInp_parsRefreshTime = $('#u432_input[name=settings_textInp_parsRefreshTime]').val(),
+          settings_checkBox_viewAllquotations = $('#u403_input[name=settings_checkBox_viewAllquotations]').is(':checked');
           $.ajax({
             type: 'POST',
             url: '/api/v1/get_quot_info/',
@@ -24,20 +25,56 @@
                 'sitelist_checkBox_coinbase': sitelist_checkBox_coinbase,
                 'sitelist_checkBox_huobi': sitelist_checkBox_huobi,
                 'settings_checkBox_autoRefresh': settings_checkBox_autoRefresh,
-                'settings_droplist_quotCoin': settings_droplist_quotCoin,
+                'settings_dropList_quotCoin': settings_dropList_quotCoin,
                 'settings_dropList_baseCoin': settings_dropList_baseCoin,
                 'settings_textInp_parsRefreshTime': settings_textInp_parsRefreshTime,
+                'settings_checkBox_viewAllquotations': settings_checkBox_viewAllquotations,
         },
             dataType: "json",
             headers: {'X-CSRFToken': "{{ csrf_token }}"},
             success: function (response) {
-              //var dat = Object.entries(response.Success).join('\n');
-              var dat = response.data.currency;
-              //alert(dat);
-              $('#u324_p').append('<span id="u324_s"></span>');
-              $('#u324_s').text(dat);
-              //$('#table-cell').text(Object.entries(response.mainpage_data).join('\n'))
-            },
+                let dataForRender = response.parsData,
+                k = 0,
+                cellNum = 0,
+                table = document.querySelector('#u320'),
+                tableCells = table.querySelectorAll('div[class="ax_default table_cell"]');
+                for (let i=0; i<dataForRender.length; i++) {
+                  let
+                  exData = dataForRender[i];
+                  console.log(exData);
+                  console.log(settings_checkBox_viewAllquotations);
+                  if (settings_checkBox_viewAllquotations == false) {
+                        cellNum+=3;
+                        console.log('start', exData.rates[settings_dropList_quotCoin]);
+                        tableCells[cellNum].querySelector('p').innerHTML = `<span></span>`;
+                        tableCells[cellNum].querySelector('span').innerText = exData.exchange;
+                        tableCells[cellNum+1].querySelector('p').innerHTML = `<span></span>`;
+                        tableCells[cellNum+1].querySelector('span').innerText = settings_dropList_quotCoin + '/' + exData.currency;
+                        tableCells[cellNum+2].querySelector('p').innerHTML = `<span></span>`;
+                        tableCells[cellNum+2].querySelector('span').innerText = exData.rates[settings_dropList_quotCoin];
+                  } else {
+                          for (let j in exData.rates) {
+                              for (let cellNum=3; cellNum<tableCells.length; cellNum+=3) {
+                                if (k>tableCells.length) {return};
+                                k += 1;
+                                tableCells[cellNum].querySelector('p').innerHTML = `<span></span>`;
+                                tableCells[cellNum].querySelector('span').innerText = exData.exchange;
+                                tableCells[cellNum+1].querySelector('p').innerHTML = `<span></span>`;
+                                tableCells[cellNum+1].querySelector('span').innerText = exData.currency;
+                                tableCells[cellNum+2].querySelector('p').innerHTML = `<span></span>`;
+                                tableCells[cellNum+2].querySelector('span').innerText = exData.rates[j];
+                              }
+                          }
+                     }
+
+                }
+                if (cellNum+3 < tableCells.length) {
+                    for (let i=cellNum+3; i<tableCells.length; i++) {
+                        tableCells[i].querySelector('p').innerHTML = `<span></span>`;
+                        tableCells[i].querySelector('span').innerText = '';
+                    }
+                }
+            }
         });
       });
     });

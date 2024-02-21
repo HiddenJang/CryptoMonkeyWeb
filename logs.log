@@ -580,3 +580,201 @@ TypeError: QuotCoinInfo_api.post.<locals>.func() missing 1 required positional a
 2024-02-20 21:05:45,183 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
 2024-02-20 21:06:56,112 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py changed, reloading.
 2024-02-20 21:06:57,614 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 12:20:05,632 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 12:20:15,019 -- django.request -- 241 -- WARNING -- Not Found: /favicon.ico
+2024-02-21 12:31:13,746 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 12:31:35,626 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 12:46:03,069 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 12:46:46,958 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 12:48:03,018 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 12:49:20,067 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 12:50:20,769 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 12:52:12,658 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 12:53:07,509 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 12:53:20,029 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 12:56:46,155 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 13:12:34,356 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 13:12:36,841 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 13:14:35,081 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 13:15:41,178 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 13:16:24,217 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 13:17:19,447 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 13:44:00,414 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 13:45:23,867 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 13:45:48,709 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 13:54:36,012 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:12:31,890 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:15:18,382 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:21:17,947 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:21:21,237 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:33:46,831 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:33:50,708 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:36:18,042 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:37:26,568 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:37:56,133 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:39:56,970 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:42:20,007 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:42:21,206 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:46:24,169 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:46:25,901 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:48:19,314 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:48:52,347 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:48:54,614 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:49:23,722 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:53:57,866 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:55:17,217 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 14:57:36,882 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:05:52,972 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:06:17,148 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:08:52,285 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:09:15,623 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:11:24,166 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:14:17,129 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:15:13,575 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:15:52,268 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:16:35,958 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:18:44,271 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:18:47,580 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:20:11,880 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:49:46,432 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 15:52:07,240 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:00:35,806 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 16:01:11,173 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:03:51,230 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:04:58,236 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/images/mainwindow/u326.png
+2024-02-21 16:05:49,830 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:07:12,725 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:11:37,863 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:11:43,039 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:12:38,033 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:22:34,900 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:26:18,254 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:28:49,630 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:29:46,475 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:31:04,092 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:31:45,848 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:32:42,603 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:33:41,311 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:34:14,838 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:37:03,646 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:38:25,748 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:39:21,937 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:40:45,692 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:41:41,288 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:42:56,220 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:44:30,305 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:45:10,817 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:46:26,347 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:47:23,790 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:48:07,794 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 16:50:15,049 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:18:10,581 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 19:18:29,191 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:18:31,539 -- django.request -- 241 -- ERROR -- Internal Server Error: /api/v1/get_quot_info/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 277, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 353, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\views.py", line 115, in post
+    return JsonResponse(pars_data, status=200)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\response.py", line 724, in __init__
+    raise TypeError(
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+2024-02-21 19:23:00,411 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 19:24:36,553 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:25:28,088 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:26:19,616 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:27:50,245 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:29:37,102 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:31:38,730 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:32:29,306 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:33:05,524 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:33:26,805 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:35:55,707 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:37:51,356 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:47:10,403 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 19:47:26,208 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:50:00,052 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:51:30,619 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:54:12,464 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:58:56,937 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 19:59:43,655 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 20:00:05,656 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 20:00:57,255 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 20:02:20,331 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 20:04:16,548 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 20:06:36,098 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 20:07:34,404 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 20:11:24,465 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 20:14:33,692 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-21 20:14:36,255 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 20:23:34,779 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-21 20:23:36,963 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 20:24:00,948 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-21 20:24:02,440 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 20:25:06,691 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-21 20:25:09,012 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 20:30:48,143 -- django.utils.autoreload -- 266 -- INFO -- D:\PythonProjects2024\CryptoMonkeyWeb\mainapp\services\quote_info_service.py changed, reloading.
+2024-02-21 20:30:50,124 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 20:44:24,414 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403_selected.svg
+2024-02-21 20:44:25,878 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403.svg
+2024-02-21 20:44:37,664 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403_selected.svg
+2024-02-21 20:44:38,726 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403.svg
+2024-02-21 20:45:22,827 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403_selected.svg
+2024-02-21 20:45:24,834 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403.svg
+2024-02-21 20:46:04,894 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403_selected.svg
+2024-02-21 20:46:06,179 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403.svg
+2024-02-21 20:50:48,200 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/app_mainpage/static/app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403_selected.svg
+2024-02-21 20:51:24,466 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/app_mainpage/static/app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403.svg
+2024-02-21 20:51:25,750 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/app_mainpage/static/app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403_selected.svg
+2024-02-21 20:51:26,447 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/app_mainpage/static/app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403.svg
+2024-02-21 20:51:59,429 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/app_mainpage/static/app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403_selected.svg
+2024-02-21 20:52:00,510 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/app_mainpage/static/app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403.svg
+2024-02-21 20:52:13,493 -- django.request -- 241 -- WARNING -- Not Found: /static/app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403.svg
+2024-02-21 20:53:38,048 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/app_mainpage/static/app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403_selected.svg
+2024-02-21 20:53:40,165 -- django.request -- 241 -- WARNING -- Not Found: /app_mainpage/app_mainpage/static/app_mainpage/images/mainwindow/settings_checkbox_viewallquotations_u403.svg
+2024-02-21 21:05:46,129 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 21:05:55,182 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 21:05:55,189 -- CryptoMonkeyWeb.quote_info_service -- 131 -- ERROR -- 'builtin_function_or_method' object is not subscriptable
+2024-02-21 21:06:29,602 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 21:06:29,605 -- CryptoMonkeyWeb.quote_info_service -- 131 -- ERROR -- 'builtin_function_or_method' object is not subscriptable
+2024-02-21 21:08:51,027 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 21:08:58,492 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 21:08:58,496 -- CryptoMonkeyWeb.quote_info_service -- 131 -- ERROR -- 'builtin_function_or_method' object is not subscriptable
+2024-02-21 21:19:07,360 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 21:19:22,584 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 21:19:22,587 -- CryptoMonkeyWeb.quote_info_service -- 135 -- ERROR -- 'NoneType' object is not subscriptable
+2024-02-21 21:20:16,758 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 21:20:26,468 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 21:20:26,470 -- CryptoMonkeyWeb.quote_info_service -- 137 -- ERROR -- 'NoneType' object is not subscriptable
+2024-02-21 21:25:08,304 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 21:25:19,945 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 21:25:59,672 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 21:26:07,397 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 21:27:27,712 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 21:27:38,933 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 21:28:04,855 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 21:28:07,946 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 21:28:50,551 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 21:28:53,546 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 21:28:54,846 -- CryptoMonkeyWeb.quote_info_service -- 139 -- ERROR -- list indices must be integers or slices, not dict
+2024-02-21 21:31:18,093 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 21:31:21,889 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor
+2024-02-21 21:31:22,371 -- CryptoMonkeyWeb.quote_info_service -- 137 -- ERROR -- list indices must be integers or slices, not dict
+2024-02-21 21:32:51,484 -- django.utils.autoreload -- 668 -- INFO -- Watching for file changes with StatReloader
+2024-02-21 21:32:56,468 -- asyncio -- 633 -- DEBUG -- Using proactor: IocpProactor

@@ -1,6 +1,7 @@
 import asyncio
 import aiohttp
 import logging
+import json
 
 logger = logging.getLogger('CryptoMonkeyWeb.quote_info_service')
 
@@ -10,7 +11,7 @@ class QuoteInfo:
 
     @staticmethod
     async def _get_myfin_data(session, base_coin):
-        url = f'https://api.coinbase.com/v2/exchange-rates?base_coin={base_coin}'
+        url = f'https://api.coinbase.com/v2/exchange-rates?currency={base_coin}'
         headers = {
             'authority': 'api.coinbase.com',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -29,7 +30,9 @@ class QuoteInfo:
         }
         try:
             async with session.get(url, headers=headers) as response:
-                return await response.json()
+                cryptocoins_dict = (await response.json())["data"]
+                cryptocoins_dict["exchange"] = "myfin"
+                return cryptocoins_dict
         except Exception as ex:
             logger.error(ex)
 
@@ -52,7 +55,10 @@ class QuoteInfo:
         }
         try:
             async with session.get(url, headers=headers) as response:
-                cryptocoins_dict = (await response.json()).get('data')
+                cryptocoins_dict = {}
+                cryptocoins_dict["rates"] = (await response.json())["data"]
+                cryptocoins_dict["currency"] = base_coin
+                cryptocoins_dict["exchange"] = "kucoin"
                 return cryptocoins_dict
         except Exception as ex:
             logger.error(ex)
@@ -60,7 +66,7 @@ class QuoteInfo:
     @staticmethod
     async def _get_coinbase_data(session, base_coin):
         # url = 'https://api.coinbase.com/v2/prices/BNB-USD/sell/'
-        url = f'https://api.coinbase.com/v2/exchange-rates?base_coin={base_coin}'
+        url = f'https://api.coinbase.com/v2/exchange-rates?currency={base_coin}'
         headers = {
             'authority': 'api.coinbase.com',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -79,18 +85,26 @@ class QuoteInfo:
         }
         try:
             async with session.get(url, headers=headers) as response:
-                cryptocoins_dict = (await response.json()).get('data').get('rates')
-                for key, coin in zip(cryptocoins_dict.keys(), cryptocoins_dict):
-                    cryptocoins_dict[key] = 1 / float(cryptocoins_dict.get(key))
+                cryptocoins_dict = {}
+                response = (await response.json()).get('data').get('rates')
+                for key, coin in zip(response.keys(), response):
+                    response[key] = 1 / float(response.get(key))
+                cryptocoins_dict["rates"] = response
+                cryptocoins_dict["currency"] = base_coin
+                cryptocoins_dict["exchange"] = "coinbase"
                 return cryptocoins_dict
         except Exception as ex:
             logger.error(ex)
 
-    async def _start_exchange_parsers(self, session, base_coin):
+    async def _start_exchange_parsers(self, session, base_coin: str, exchanges: list) -> list:
         tasks = []
-        tasks.append(asyncio.create_task(self._get_myfin_data(session, base_coin)))
-        tasks.append(asyncio.create_task(self._get_kucoin_data(session, base_coin)))
-        tasks.append(asyncio.create_task(self._get_coinbase_data(session, base_coin)))
+        print(exchanges)
+        if "myfin" in exchanges:
+            tasks.append(asyncio.create_task(self._get_myfin_data(session, base_coin)))
+        if "kucoin" in exchanges:
+            tasks.append(asyncio.create_task(self._get_kucoin_data(session, base_coin)))
+        if "coinbase" in exchanges:
+            tasks.append(asyncio.create_task(self._get_coinbase_data(session, base_coin)))
         results = await asyncio.gather(*tasks)
         return results
 
@@ -98,9 +112,27 @@ class QuoteInfo:
         """Получение данных по выбранным валютам на выбранных биржах"""
 
         try:
+            exchanges = []
+            for key in settings.keys():
+                if ('sitelist_checkBox' in key) and (settings.get(key)[0] == 'true'):
+                    exchanges.append(key.split('_')[2])
             base_coin = settings.get("settings_dropList_baseCoin")[0].upper()
+            quot_coin = settings.get("settings_dropList_quotCoin")[0].upper()
+
             async with aiohttp.ClientSession() as session:
-                pars_data = await self._start_exchange_parsers(session, base_coin)
+                pars_data = await self._start_exchange_parsers(session, base_coin, exchanges)
+            print('flag2')
+            if settings.get("settings_checkBox_viewAllquotations")[0] == 'false':
+                for exchange_data in pars_data:
+                    exchange_markets = exchange_data["rates"]
+                    required_market = {}
+                    try:
+                        required_market[quot_coin] = exchange_markets[quot_coin]
+                    except Exception:
+                        required_market[quot_coin] = 'Not found'
+                    print('flag3', required_market)
+                    exchange_data["rates"] = required_market
+
         except Exception as ex:
             logger.error(ex)
             pars_data = ['empty']
@@ -109,4 +141,7 @@ class QuoteInfo:
 
 if __name__ == '__main__':
     crypto = QuoteInfo()
-    print(asyncio.run(crypto.get_coins_data({"settings_dropList_baseCoin": ["RUB"]})))
+    res = asyncio.run(crypto.get_coins_data({"settings_dropList_baseCoin": ["RUB"]}))
+    print(res)
+    # for data in res:
+    #     print(data, '\n')

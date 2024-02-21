@@ -110,16 +110,11 @@ class QuotCoinInfo_api(View):
     async def post(self, request):
         mainpage_settings = dict(request.POST)
         mainpage_settings.pop('csrfmiddlewaretoken', 'key not found')
-
-        async def func():
-            pars_data = await QuoteInfo().get_coins_data(mainpage_settings)
-            print(pars_data[0]["data"]["currency"])
-            return JsonResponse(pars_data[0], status=200)
-
-        while True:
-            await func()
-            await asyncio.sleep(3)
-        return JsonResponse({"Stoped": "true"}, status=200)
+        print(mainpage_settings)
+        pars_data = {}
+        pars_data["parsData"] = await QuoteInfo().get_coins_data(mainpage_settings)
+        print(pars_data)
+        return JsonResponse(pars_data, status=200)
 
 
 class ApikeysInput_api(APIView):
