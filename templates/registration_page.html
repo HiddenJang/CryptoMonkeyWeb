@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <form method="POST" action="" style="">
+      <form method="POST" action="" id="reg_form">
           <!-- Unnamed (Text Field) -->
           <div id="u2" class="ax_default text_field">
             <div id="u2_div" class=""></div>
@@ -60,14 +60,12 @@
           <!-- Unnamed (Rectangle) -->
 
           {% csrf_token %}
-          <button type="submit" class="btn btn-primary" style="">
-              <div id="u6" class="ax_default button">
-                <div id="u6_div" class=""></div>
-                <div id="u6_text" class="text ">
-                  <p><span>Зарегистрироваться</span></p>
-                </div>
-              </div>
-          </button>
+          <div id="u6" class="ax_default button" onclick='document.getElementById("reg_form").submit()' style="cursor: pointer;">
+            <div id="u6_div" class=""></div>
+            <div id="u6_text" class="text " style="text-align: center">
+              <p><span> Зарегистрироваться </span></p>
+            </div>
+          </div>
 
           <!-- Unnamed (Text Field) -->
           <div id="u7" class="ax_default text_field">
@@ -97,6 +95,7 @@
             </div>
           </div>
       </form>
+      <h3>{{ text }}</h3>
     </div>
   </body>
 </html>

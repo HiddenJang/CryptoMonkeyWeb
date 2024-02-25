@@ -46,10 +46,10 @@
       $axure.utils.getReloadPath = function() { return "{% static 'app_mainpage/resources/reload.html' %}"; };
     </script>
     <!-- Обработчик форм -->
-    {% include "AJAX.html" %}
+    {% include "AJAX_handlers_mainpage.html" %}
   </head>
   <body>
-    <div id="base" class="">
+
 
       <!-- AutoTradeModalWindow (Group) -->
       <div id="u0" class="ax_default ax_default_hidden" data-label="AutoTradeModalWindow" style="display:none; visibility: hidden" data-left="147" data-top="28" data-width="1101" data-height="731">
@@ -71,7 +71,7 @@
         </div>
 
         <!-- pushButton_startTrade (Rectangle) -->
-        <div id="u3" class="ax_default button" data-label="pushButton_startTrade">
+        <div id="u3" class="ax_default button" data-label="pushButton_startTrade" style="cursor: pointer;">
           <div id="u3_div" class=""></div>
           <div id="u3_text" class="text ">
             <p><span>Старт</span></p>
@@ -1990,7 +1990,7 @@
         <div id="u250" style="display:none; visibility:hidden;"></div>
 
         <!-- pushButton_stopTrade (Rectangle) -->
-        <div id="u260" class="ax_default button" data-label="pushButton_stopTrade">
+        <div id="u260" class="ax_default button" data-label="pushButton_stopTrade" style="cursor: pointer;">
           <div id="u260_div" class=""></div>
           <div id="u260_text" class="text ">
             <p><span>Стоп</span></p>
@@ -2079,7 +2079,7 @@
         </div>
 
         <!-- pushButton_EnableRefreshTime (Rectangle) -->
-        <div id="u272" class="ax_default button" data-label="pushButton_EnableRefreshTime">
+        <div id="u272" class="ax_default button" data-label="pushButton_EnableRefreshTime" style="cursor: pointer;">
           <div id="u272_div" class=""></div>
           <div id="u272_text" class="text ">
             <p><span>Установить</span></p>
@@ -2305,13 +2305,15 @@
       </div>
 
       <!-- mainwindow_header_buttonExit (Rectangle) -->
-      <div id="u303" class="ax_default primary_button" data-label="mainwindow_header_buttonExit">
-        <div id="u303_div" class=""></div>
-        <div id="u303_text" class="text ">
-          <p><span>Выйти</span></p>
-        </div>
-      </div>
-      <div id="u299" style="display:none; visibility:hidden;"></div>
+      <form method="GET" id="u303_form" action="/logout_page">
+          <div id="u303" class="ax_default primary_button" onclick='document.getElementById("u303_form").submit()' data-label="mainwindow_header_buttonExit">
+            <div id="u303_div" class=""></div>
+            <div id="u303_text" class="text ">
+                <p><span>Выйти</span></p>
+            </div>
+          </div>
+          <div id="u299" style="display:none; visibility:hidden;"></div>
+      </form>
 
       <!-- mainwindow_footer_background (Footer) -->
 
@@ -2350,7 +2352,7 @@
           <p><span>Выбор площадок</span></p>
         </div>
       </div>
-      <form method="POST" action="" style="" id="sitelist_form" >
+      <form method="POST" action="" style="" id="sitelist_form">
       {% csrf_token %}
           <!-- sitelist_item_myfin (Checkbox) -->
           <div id="u310" class="ax_default checkbox" data-label="sitelist_item_myfin">
@@ -2412,7 +2414,7 @@
           <!-- sitelist_item_huobi (Checkbox) -->
           <div id="u316" class="ax_default checkbox selected" data-label="sitelist_item_huobi">
             <label id="u316_input_label" for="u316_input" style="position: absolute; left: 0px;">
-              <img id="u316_img" class="img " src="{% static 'app_mainpage/images/mainwindow/sitelist_item_huobi_u316_selected.svg' %}"/>
+              <img id="u316_img" class="img " src="{% static 'app_mainpage/images/mainwindow/sitelist_item_huobi_u316_disabled.svg' %}"/>
               <div id="u316_text" class="text ">
                 <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Huobi</span></p>
               </div>
@@ -2429,14 +2431,13 @@
           </div>
 
           <!-- sitelist_button_loadSiteData (Rectangle) -->
-          <button id="load-button" type="submit" class="btn btn-primary" style="">
-              <div id="u318" class="ax_default button" data-label="sitelist_button_loadSiteData">
-                <div id="u318_div" class=""></div>
-                <div id="u318_text" class="text ">
-                  <p><span>Загрузить данные</span></p>
-                </div>
-              </div>
-          </button>
+          <div id="u318" class="ax_default button"  data-label="sitelist_button_loadSiteData" style="cursor: pointer;">
+            <div id="u318_div" class=""></div>
+            <div id="u318_text" class="text ">
+              <p><span>Загрузить данные</span></p>
+            </div>
+          </div>
+
       </form>
 
       <!-- mainwindow_label_currenciesInformWindow (Rectangle) -->
@@ -3086,7 +3087,7 @@
       </div>
 
       <!-- settings_button_quotCoinSearch (Rectangle) -->
-      <div id="u399" class="ax_default button" data-label="settings_button_quotCoinSearch">
+      <div id="u399" class="ax_default button" data-label="settings_button_quotCoinSearch" style="cursor: pointer;">
         <div id="u399_div" class=""></div>
         <div id="u399_text" class="text ">
           <p><span>Поиск</span></p>
@@ -3094,7 +3095,7 @@
       </div>
 
       <!-- settings_button_addQuotCoin (Rectangle) -->
-      <div id="u400" class="ax_default button" data-label="settings_button_addQuotCoin">
+      <div id="u400" class="ax_default button" data-label="settings_button_addQuotCoin" style="cursor: pointer;">
         <div id="u400_div" class=""></div>
         <div id="u400_text" class="text ">
           <p><span>Добавить валюту</span></p>
@@ -3102,7 +3103,7 @@
       </div>
 
       <!-- settings_button_deleteQuotCoin (Rectangle) -->
-      <div id="u401" class="ax_default button" data-label="settings_button_deleteQuotCoin">
+      <div id="u401" class="ax_default button" data-label="settings_button_deleteQuotCoin" style="cursor: pointer;">
         <div id="u401_div" class=""></div>
         <div id="u401_text" class="text ">
           <p><span>Удалить валюту</span></p>
@@ -3303,11 +3304,11 @@
             <p><span>Включить имитацию торговли</span></p>
           </div>
         </label>
-        <input id="u424_input" type="checkbox" value="checkbox" name="autoTradeSettings_checkBox_enableImitatitonTrade"/>
+        <input id="u424_input" type="checkbox" value="checkbox" name="autoTradeSettings_checkBox_enableImitatitonTrade" disabled/>
       </div>
 
       <!-- autoTradeSettings_button_cryptoBotStart (Rectangle) -->
-      <div id="u425" class="ax_default button" data-label="autoTradeSettings_button_cryptoBotStart">
+      <div id="u425" class="ax_default button" data-label="autoTradeSettings_button_cryptoBotStart" style="cursor: pointer;">
         <div id="u425_div" class=""></div>
         <div id="u425_text" class="text ">
           <p><span>Настроить и запустить трейд-бота</span></p>
@@ -3315,7 +3316,7 @@
       </div>
 
       <!-- autoTradeSettings_button_getBalances (Rectangle) -->
-      <div id="u426" class="ax_default button disabled" data-label="autoTradeSettings_button_getBalances">
+      <div id="u426" class="ax_default button disabled" data-label="autoTradeSettings_button_getBalances" style="cursor: pointer;">
         <div id="u426_div" class="disabled"></div>
         <div id="u426_text" class="text ">
           <p><span>Запросить баланс</span></p>
@@ -3323,44 +3324,40 @@
       </div>
 
       <!-- autoTradeSettings_button_placeOrder (Rectangle) -->
-      <button id="autoTradeSettings_button_placeOrder" type="submit" class="btn btn-primary" style="">
-          <div id="u427" class="ax_default button disabled" data-label="autoTradeSettings_button_placeOrder">
-            <div id="u427_div" class="disabled"></div>
-            <div id="u427_text" class="text ">
-              <p><span>Разместить ордер</span></p>
-            </div>
-          </div>
-      </button>
+      <div id="u427" class="ax_default button disabled" data-label="autoTradeSettings_button_placeOrder" style="cursor: pointer;">
+        <div id="u427_div" class="disabled"></div>
+        <div id="u427_text" class="text ">
+          <p><span>Разместить ордер</span></p>
+        </div>
+      </div>
+
 
       <!-- autoTradeSettings_button_cancelOrder (Rectangle) -->
-      <button id="autoTradeSettings_button_cancelOrder" type="submit" class="btn btn-primary" style="">
-          <div id="u428" class="ax_default button" data-label="autoTradeSettings_button_cancelOrder">
-            <div id="u428_div" class=""></div>
-            <div id="u428_text" class="text ">
-              <p><span>Отменить ордер</span></p>
-            </div>
-          </div>
-      </button>
+      <div id="u428" class="ax_default button" data-label="autoTradeSettings_button_cancelOrder" style="cursor: pointer;">
+        <div id="u428_div" class=""></div>
+        <div id="u428_text" class="text ">
+          <p><span>Отменить ордер</span></p>
+        </div>
+      </div>
+
 
       <!-- autoTradeSettings_button_getOpenOrdersInfo (Shape) -->
-      <button id="autoTradeSettings_button_getOpenOrdersInfo" type="submit" class="btn btn-primary" style="">
-          <div id="u429" class="ax_default button" data-label="autoTradeSettings_button_getOpenOrdersInfo">
-            <img id="u429_img" class="img " src="{% static 'app_mainpage/images/mainwindow/autotradesettings_button_getopenordersinfo_u429.svg' %}"/>
-            <div id="u429_text" class="text ">
-              <p><span>Загрузить историю ордеров</span></p>
-            </div>
-          </div>
-      </button>
+      <div id="u429" class="ax_default button" data-label="autoTradeSettings_button_getOpenOrdersInfo" style="cursor: pointer;">
+        <img id="u429_img" class="img " src="{% static 'app_mainpage/images/mainwindow/autotradesettings_button_getopenordersinfo_u429.svg' %}"/>
+        <div id="u429_text" class="text ">
+          <p><span>Загрузить историю ордеров</span></p>
+        </div>
+      </div>
+
 
       <!-- settings_button_EnableRefreshTime (Rectangle) -->
-      <button id="settings_button_EnableRefreshTime" type="submit" class="btn btn-primary" style="">
-          <div id="u430" class="ax_default button" data-label="settings_button_EnableRefreshTime">
-            <div id="u430_div" class=""></div>
-            <div id="u430_text" class="text ">
-              <p><span>Установить</span></p>
-            </div>
-          </div>
-      </button>
+      <div id="u430" class="ax_default button" data-label="settings_button_EnableRefreshTime" style="cursor: pointer;">
+        <div id="u430_div" class=""></div>
+        <div id="u430_text" class="text ">
+          <p><span>Установить</span></p>
+        </div>
+      </div>
+
 
       <!-- settings_group_parsRefreshTime (Group) -->
       <div id="u431" class="ax_default" data-label="settings_group_parsRefreshTime" data-left="1052" data-top="158" data-width="61" data-height="14">

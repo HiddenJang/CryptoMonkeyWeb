@@ -1,7 +1,6 @@
 import asyncio
 import aiohttp
 import logging
-import json
 
 logger = logging.getLogger('CryptoMonkeyWeb.quote_info_service')
 
@@ -98,13 +97,18 @@ class QuoteInfo:
 
     async def _start_exchange_parsers(self, session, base_coin: str, exchanges: list) -> list:
         tasks = []
-        print(exchanges)
         if "myfin" in exchanges:
             tasks.append(asyncio.create_task(self._get_myfin_data(session, base_coin)))
         if "kucoin" in exchanges:
             tasks.append(asyncio.create_task(self._get_kucoin_data(session, base_coin)))
         if "coinbase" in exchanges:
             tasks.append(asyncio.create_task(self._get_coinbase_data(session, base_coin)))
+        if not tasks:
+            cryptocoins_dict = {}
+            cryptocoins_dict["rates"] = {'No parser for exchange'}
+            cryptocoins_dict["currency"] = base_coin
+            cryptocoins_dict["exchange"] = exchanges
+            return [cryptocoins_dict]
         results = await asyncio.gather(*tasks)
         return results
 
@@ -121,7 +125,6 @@ class QuoteInfo:
 
             async with aiohttp.ClientSession() as session:
                 pars_data = await self._start_exchange_parsers(session, base_coin, exchanges)
-            print('flag2')
             if settings.get("settings_checkBox_viewAllquotations")[0] == 'false':
                 for exchange_data in pars_data:
                     exchange_markets = exchange_data["rates"]
@@ -130,13 +133,12 @@ class QuoteInfo:
                         required_market[quot_coin] = exchange_markets[quot_coin]
                     except Exception:
                         required_market[quot_coin] = 'Not found'
-                    print('flag3', required_market)
                     exchange_data["rates"] = required_market
+            return pars_data
 
         except Exception as ex:
             logger.error(ex)
-            pars_data = ['empty']
-        return pars_data
+            return
 
 
 if __name__ == '__main__':

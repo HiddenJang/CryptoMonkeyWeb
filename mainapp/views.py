@@ -1,98 +1,48 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
-from django.db import utils
-from django.http import JsonResponse, HttpResponse
+from django.shortcuts import render, redirect
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
-from django.middleware.csrf import get_token
-from django.template.loader import render_to_string
-
-from rest_framework.views import APIView
+from django.http import JsonResponse
 from django.views import View
-from rest_framework import viewsets
+from rest_framework.views import APIView
 from rest_framework.decorators import api_view
-from django.views.decorators.csrf import csrf_exempt
-from django.utils.decorators import async_only_middleware
-from rest_framework.response import Response
-
-from asgiref.sync import async_to_sync
-
+import settings
 from .models import App_mainpage_states
-from .serializers import MainpageStatesSerializer
 
-from rest_framework.renderers import JSONRenderer
+from .services.login_and_registration_service import EntranceService
+from .services.quote_info_service import QuoteInfo
 
 import logging
-import asyncio
 
 
-from .services.quote_info_service import QuoteInfo
 
 logger = logging.getLogger('CryptoMonkeyWeb.views')
 
-# Create your views here.
+#_____________Page render views______________#
 
 def login_page(request):
-    if request.method == 'POST':
-        try:
-            if request.user.is_authenticated:
-                return redirect(app_mainpage)
-
-            else:
-                user_login = request.POST['login']
-                user_password = request.POST['password']
-                user = authenticate(request, username=user_login, password=user_password)
-                if user is None:
-                    context = {'text': 'Введен неверный логин или пароль!'}
-                    return render(request, 'login_page.html', context)
-
-                login(request, user)
-                return redirect(app_mainpage)
-        except Exception:
-            context = {'text': 'Ошибка авторизации!'}
-            return render(request, 'login_page.html', context)
-    elif request.method == 'GET' and request.user.is_authenticated:
-        return redirect(app_mainpage)
+    login_result = EntranceService(request).login_user()
+    if login_result["result"]:
+        return redirect(login_result["page"])
     else:
-        return render(request, 'login_page.html')
+        return render(request, login_result["page"], login_result["context"])
+
+def registration_page(request):
+    reg_result = EntranceService(request).registrate_user()
+    if reg_result["result"]:
+        return redirect(reg_result["page"])
+    else:
+        return render(request, reg_result["page"], reg_result["context"])
 
 def logout_page(request):
     logout(request)
     return redirect(login_page)
 
-def registration_page(request):
-    if request.method == 'POST':
-        user_login = request.POST['login']
-        user_password = request.POST['password']
-        first_name = request.POST['name']
-        email = request.POST['email']
-
-        try:
-            user = User.objects.create_user(user_login, email, user_password, first_name=first_name)
-            user.save()
-            context = {'text': 'Успешная регистрация! Нажмите кнопку <Войти>!'}
-            return render(request, 'login_page.html', context)
-        except utils.IntegrityError:
-            context = {'text': 'Данный пользователь уже зарегистрирован!'}
-            return render(request, 'registration_page.html', context)
-
-    else:
-        return render(request, 'registration_page.html')
-
+@login_required(login_url='login_page')
 def app_mainpage(request):
-
     if request.method == 'GET':
-        if request.user.is_authenticated:
-            context = {}
-            csrf_token = get_token(request)
-            context['csrf_token'] = csrf_token
-            return render(request, 'app_mainpage.html', context)
-        else:
-            context = {'text': 'Необходимо авторизоваться перед входом!'}
-            #return redirect(reverse(login_page, kwargs=context))
-            return redirect(login_page)
+        return render(request, 'app_mainpage.html')
     else:
-        return redirect(app_mainpage)
+        return redirect(login_page)
 
 
 #_____________API______________#
@@ -110,20 +60,19 @@ class QuotCoinInfo_api(View):
     async def post(self, request):
         mainpage_settings = dict(request.POST)
         mainpage_settings.pop('csrfmiddlewaretoken', 'key not found')
-        print(mainpage_settings)
         pars_data = {}
         pars_data["parsData"] = await QuoteInfo().get_coins_data(mainpage_settings)
-        print(pars_data)
         return JsonResponse(pars_data, status=200)
 
 
-class ApikeysInput_api(APIView):
-
-    def get(self, request):
-        context = {}
-        csrf_token = get_token(request)
-        context['csrf_token'] = csrf_token
-        return JsonResponse({"Html": render_to_string("login_page.html", context)})
+class KeysInput_api(APIView):
+    """Контроллер получения ключей API криптобиржи для автоматической торговли"""
+    def post(self, request):
+        settings.API_KEYS[dict(request.POST)["APIkeysInputWindow_dropList_exchangeType"][0]] = {
+            "api_key": dict(request.POST)["APIkeysInputWindow_textInp_apiKeyInput"][0],
+            "secret_key": dict(request.POST)["APIkeysInputWindow_textInp_secretKeyInput"][0]
+        }
+        return JsonResponse({"Success": "true"}, status=200)
 
 
 # @api_view(['POST'])
