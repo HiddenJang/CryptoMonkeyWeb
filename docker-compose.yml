@@ -1,0 +1,42 @@
+version: '2.24.6'
+
+services:
+  db:
+    image: mysql
+    container_name: cryptomonkeyDB
+    env_file:
+      - .env
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  cryptomonkeyweb:
+    image: cryptomonkey_docker:latest
+    container_name: cryptomonkey_docker
+    depends_on:
+      - db
+    volumes:
+      - static_volume:/cryptomonkey/static
+      - media_volume:/cryptomonkey/media
+    env_file:
+      - .env
+    command: >
+      bash -c "gunicorn -b 0.0.0.0:8000 CryptoMonkeyWeb.wsgi:application"
+
+  nginx:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./docker/nginx/
+    container_name: cryptomonkey_nginx
+    image: cryptomonkey_nginx
+    volumes:
+      - static_volume:/cryptomonkey/static
+      - media_volume:/cryptomonkey/media
+    ports:
+      - "${NGINX_EXTERNAL_PORT}:80"
+    depends_on:
+      - cryptomonkeyweb
+
+volumes:
+  mysql_data:
+  static_volume:
+  media_volume:
