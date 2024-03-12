@@ -27,9 +27,6 @@ COPY . /cryptomonkey/
 # Устанавливаем зависимости из requirements.txt
 #COPY requirements.txt /app/
 RUN pip install -r requirements.txt
-
 USER cryptomonkey
 
-#CMD ["python", "manage.py", "makemirgations"]
-CMD ["python", "manage.py", "migrate"]
 CMD ["gunicorn", "-b", "0.0.0.0:8000", "CryptoMonkeyWeb.wsgi:application"]

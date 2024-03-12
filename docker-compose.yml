@@ -9,6 +9,15 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      ports:
+        - "8080:80"
+      environment:
+        PMA_HOST: db
+      depends_on:
+        - db
+
   cryptomonkeyweb:
     image: cryptomonkey_docker:latest
     container_name: cryptomonkey_docker
@@ -20,7 +29,9 @@ services:
     env_file:
       - .env
     command: >
-      bash -c "gunicorn -b 0.0.0.0:8000 CryptoMonkeyWeb.wsgi:application"
+      bash -c "python manage.py makemigrations
+      && python manage.py migrate
+      && gunicorn -b 0.0.0.0:8000 CryptoMonkeyWeb.wsgi:application"
 
   nginx:
     build:

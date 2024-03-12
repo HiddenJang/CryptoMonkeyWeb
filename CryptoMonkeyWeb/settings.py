@@ -81,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.getenv('MYSQL_NAME', 'CryptoMonkeyDB'),
-        'USER': os.getenv('MYSQL_USER', 'cryptomonkey'),
-        'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+        'USER': os.getenv('MYSQL_USER', 'root'),
+        'PASSWORD': os.getenv('MYSQL_ROOT_PASSWORD'),
         'HOST': os.getenv('MYSQL_HOST', 'localhost'),
         'PORT': os.getenv('MYSQL_PORT', '3306'),
         'OPTIONS': {
@@ -129,7 +129,7 @@ USE_TZ = True
 
 #STATIC_URL = 'app_mainpage/static/'
 #STATIC_ROOT = [BASE_DIR / 'static']
-STATIC_URL = 'app_mainpage/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static") # Изначально пустой каталог, куда Django соберёт всё при выполнении manage.py collectstatic
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static_dev"), # Каталог, куда вам нужно складывать статику проекта, не относящуюся к конкретному приложению
